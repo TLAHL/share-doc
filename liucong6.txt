@@ -2,3 +2,5 @@
 sumning pay
 
 apple pay
+
+xiaomi pay
