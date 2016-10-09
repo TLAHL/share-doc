@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/app.css" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+	    <script src="./js/angular/angular.js"></script>
+	    <script src="./js/angular/angular-ui-router.js"></script>
+	    <script src="./js/angular/ui-bootstrap-tpls.js"></script>
+	    <script src="./js/topmenu.js"></script>
+	    <script src="./js/util.js"></script>
+	    <script src="./js/nw-native.js"></script>
+	</head>
+	<body class="menu-container" ng-app="TopMenu" ng-controller="topMenuCtr">
+		  <div class="dropdown">
+		      <!-- Link or button to toggle dropdown -->
+		      <ul class="dropdown-menu" role="menu" style="display: block;margin-top:0px;min-width:134px;width:144px;font-size:12px;">
+		        <li ng-repeat="item in menu"  ng-click="execute(item)"  ng-hide="item.hide"><a ng-if="!item.isSeperator" tabindex="-1" href="#">{{item.name}}</a><span ng-if="item.id == '10005' && isUpdate" class="unread-icon unread-lt99"></span><hr ng-if="item.isSeperator" /></li>
+		      </ul>
+	      </div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="msgBox">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-controller = "msgCtrl" style="overflow-y:hidden;">
+	<div id="msgbox"  style="position:relative;">
+		<div class="msg-dialog-title">
+			<p class="dialog-title">消息盒子</p>
+			<i class="close-notice-dialog" ng-click="closeWindow()"></i>
+		</div>
+		<div class="msg-container">
+			<ul class="msg-content">
+				<li class="msg-line" ng-repeat="msg in msgs">
+					<span>{{msg.title}}</span>
+					<br/>
+					<span style="margin-left:10px">{{msg.content}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+<script src="../js/angular/angular.js"></script>
+<script src="../js/nw-native.js"></script>
+
+<script>
+var app = angular.module("msgBox",[]);
+var isHidenMsgBox = true;
+var gui = require('nw.gui');
+var win = gui.Window.get();
+var screenHeight = window.screen.availHeight;
+
+app.controller('msgCtrl', function($rootScope, $scope, $timeout){
+	$scope.msgs = window.args.msgs;
+	console.log($scope.msgs)
+	window.opener.settingInfo.isShowLock = false;
+    $scope.closeWindow = function (){
+    	window.close();
+    }
+ });
+</script>
+</body>
+</html>

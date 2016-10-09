@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="572,402" caption="0,0,0,36" roundcorner="4,4" >
+    <Font name="微软雅黑" size="22" bold="true" italic="true"/>  <!-- size0 -->
+    <Font name="微软雅黑" size="24" />   <!--size1 -->
+    <Font name="微软雅黑" size="16" />   <!--size2 -->
+    <Font name="微软雅黑" size="14"  />      <!--size3 -->
+    <Font name="微软雅黑" size="12" />    <!--size4 -->
+    <Font name="微软雅黑" size="14" bold="true" />  
+    <Font name="微软雅黑" size="24" bold="true" />
+	<VerticalLayout bordersize="1" bordercolor="#FF768D9B" borderround="5,5" inset="1,1,1,1" >
+        <VerticalLayout height="250" bkimage="file='img_bk_normal.png'">
+			<HorizontalLayout height="35">
+				<HorizontalLayout>
+					<Label name="texttitle" font="2" text="安装" textcolor="#FFF4F8FE" padding="10,10,0,0"/>
+				</HorizontalLayout>
+				<Control />
+				<HorizontalLayout width="71" >
+					<Button name="BTN_MIN" width="30" height="25" padding="5,5,0,0" normalimage="file='btn_min_normal.png' " hotimage="file='btn_min_hover.png'" pushedimage="file='btn_min_push.png'"/>
+					<Button name="BTN_CLOSE" width="30" height="25" padding="5,5,0,0" normalimage="file='btn_close_normal.png' " hotimage="file='btn_close_hover.png'" pushedimage="file='btn_close_push.png'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+			<VerticalLayout height="215">
+			<AlphaImage float="true" bkimage="01.jpg|02.jpg|03.jpg" stay="2000" pos="50,0,0,0" width="480" height="200" bkcolor="#FFFFFFFF" />   
+			</VerticalLayout>
+		</VerticalLayout>
+			<VerticalLayout bkcolor="#FFFFFFFF" height= "152">
+				<Label name="PRECT" width="417" height="12" padding="32,52,0,0" font="4" textcolor="#FF868484" text="正在安装..." textpadding="10,0,10,0" textcolor="#FF868484"  endellipsis="true"/>
+				<Progress name="PROGRESS" width="508" height="8" padding="32,9,32,0" hor="true" isstretchfore="true" bkimage="file='ProgressBar/bg_back.png' corner='8,0,8,0' " foreimage="file='ProgressBar/bg_font_bk.png' corner='3,0,3,0'" align="center"/>
+			</VerticalLayout>
+			<Control height="30"/>
+    </VerticalLayout>
+</Window>

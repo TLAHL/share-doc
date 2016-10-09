@@ -1,0 +1,226 @@
+{
+	"single_app": false,
+	
+	"autoUpdate": true,
+	
+	"logo":{
+			"icon":"img/topbar_logo.png"
+	},
+	
+	"personal":{
+			"position":"top",
+			"url":"http://i.safecenter.com/login.do"
+	},
+	
+	"about":{
+			"version":"版本：2.1.24-2.2.20",
+			"copyright":"郑州信大捷安信息技术股份有限公司",
+			"title":"关于PC应用框架",
+			"address":"http://www.xdja.com",
+			"phone":"联系我们：029-29383372"},
+	
+	"closeWindow":true,
+	
+	"tray":{
+			"icon":"./PCApplicationFramework/img/touxiang16px.png",
+			"title":"PC应用框架",
+			"tooltip":"PC应用框架",
+			"menu":[{"label":"打开PC应用框架",  "id":"1000101"},
+				{"label":"锁定","id":"1000102", "click":"lockDialog()"},
+				{"label":"关于","id":"1000103", "click":"aboutApp()"},
+			        {"label":"退出软件",  "id":"1000104"}]
+	},
+	
+	"notice":{
+				"noticeUrl":"http://11.12.112.115:8020/ATView/index.html",
+				"hide":false,
+				"items":[ 
+							{"name":"系统消息", 
+							 "url":"http://11.12.112.115:8020/ATView/index.html"
+							},
+							{"name":"AT+消息", 
+							 "url":"http://11.12.112.115:8020/ATView/index.html"
+							},
+							{"name":"安全邮件消息", 
+							 "url":"http://172.28.25.19:8082/report"
+							},
+							{"name":"OA消息",
+							 "url":"http://oac.cssp.safecenter.com:8080/moaCenter/report"
+							},
+							{"name":"微信消息",
+							 "url":"http://web.weixinju.com/report"
+							}]
+				},
+	
+	"search":{
+				"hide":false,
+				"position":"left",
+				"method":"getSearchData()",
+				"submitSearch":"submitSearch(data)"
+			},
+	
+	"left_menu":{
+					"hide":false,
+					"menu":[
+							{"name":"AT+", 
+							 "icon":"img/logo01.png", 
+							 "url":"http://11.12.112.115:8020/ATView/index.html",
+							 "setting":"openATSettingPage()",
+							 "installkey":"安通+",
+							 "id":"1001001"
+							},
+							{"name":"微信", 
+							 "icon":"img/weixin.png", 
+							 "url":"http://web.weixinju.com/",
+							 "setting":"openWeiXinSettingPage()",
+							 "id":"1001004"
+							},
+							{"name":"安全邮件", 
+							 "icon":"img/mail.png", 
+							 "url":"http://172.28.25.19:8082/index.hthl",
+							 "setting":"openMailSettingPage()",
+							 "installkey":"安全邮件",
+							 "id":"1001002"
+							},
+							{"name":"OA", 
+							 "icon":"img/oa.png", 
+							 "url":"http://oac.cssp.safecenter.com:8080/moaCenter/",
+							 "setting":"openOASettingPage()",
+							 "id":"1001003"
+							}
+							]
+				},
+				
+	"top_menu":{
+					"hide":false,
+					"menu":[
+							{
+							 "hide":false,
+							 "name":"换肤",
+							 "id":"10001"
+							},
+							{
+							 "isSeperator":true
+							},
+							{
+							 "hide":false,
+							 "name":"帮助",
+							 "id":"10002",
+							 "href":"http://XXXXXX/help.html"
+							},
+							{
+							 "hide":false,
+							 "name":"意见反馈",
+							 "id":"10003",
+							 "method":"submitNotice(data)"
+							},
+							{
+							 "hide":false,
+							 "name":"加入用户体验",
+							 "id":"10004",
+							 "href":"",
+							 "method":"submitExperience()",
+							 "comment":"我们感谢您加入XX业务的用户体验改进计划，您的相关使用和信息都是正常和保密的，也不会影响你使用现有产品！",
+							 "signature":"XXXCEO 王大锤"
+							},
+							{
+							 "hide":false,
+							 "name":"检查更新",
+							 "id":"10005",
+							 "href":"",
+							 "method":"checkVersion()"
+							},
+							{
+							 "isSeperator":true
+							},
+							{
+							 "hide":false,
+							 "name":"系统设置",
+							 "id":"10006",
+							 "href":""
+							},
+							{
+							 "hide":false,
+							 "name":"关于",
+							 "id":"10007",
+							 "href":"",
+							 "method":"aboutApp()"
+							},
+							{
+							 "isSeperator":true
+							},
+							{
+							 "hide":false,
+							 "name":"退出登录",
+							 "id":"10008",
+							 "href":"",
+							 "method":"exitApp()"
+							}
+					    ]
+				},
+	"login":{
+			"login_carousel":{ 
+						"hide":false,
+						"items":[
+							{"src":"img/login/展示1.png", "alt":""},
+							{"src":"img/login/展示2.png", "alt":""},
+							{"src":"img/login/展示3.png", "alt":""}
+						]
+					},
+					
+			"getATAccount":{ 
+								"hide":false,
+								"url":"http://www.safecenter.com/help.html?tab=pmc_tab"
+							},
+							
+			"findPassword":{ 
+								"hide":false,
+								"url":"https://i.safecenter.com/getaccount",
+								"lockUrl":"http://www.safecenter.com/ukeyUnlock.html"
+							}
+	},
+	
+	"setting":{ 
+				"systemsetting":{
+					"hide":false,
+					"name":"系统设定",
+					"auto":{
+							"hide":false,
+							"auto":false
+					},
+					"update":{
+							"hide":false,
+							"update":false
+					},
+					"notice":{
+							"hide":false,
+							"noticesort":1,
+							"voice":true,
+							"desktopnotice":true
+							
+					},
+					"lock":{
+							"hide":false,
+							"locktime":10
+					},
+					"changepassword":{
+							"hide":false
+					}
+				},
+				"appsetting":{
+					"hide":false,
+					"name":"应用设定",
+					"url":""
+				},
+				"othersetting":[{
+					"hide":false,
+					"name":"其他设定",
+					"url":"modeldialog/testsetting.html"
+				},
+				{
+					"hide":false,
+					"name":"安通+设定",
+					"url":""
+				}]
+	}
+}

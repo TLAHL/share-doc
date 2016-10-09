@@ -1,0 +1,29 @@
+<div class="setting-general">
+	<div class="setting-item">
+		<fieldset>
+			<legend>启动</legend>
+			<div class="setting-select" ng-model="auto"  ng-click="autofun(this)">
+				<span class="checked-off" ng-class="{'checked-on':!!auto}"></span>
+				<span>开机自动启动</span>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>设备</legend>
+			<div class="setting-select1">
+				<label>锁定设备</label>
+				<span class="lock" ng-click="lockByTime(10)"><span class="radio-off" ng-class="{'radio-on':locktime==10}"></span>非活动状态10分钟</span>
+				<br />
+				<span class="lock1" ng-click="lockByTime(30)"><span class="radio-off" ng-class="{'radio-on':locktime==30}"></span>非活动状态30分钟</span>
+				<br />
+				<span class="lock1" ng-click="lockByTime(60)"><span class="radio-off" ng-class="{'radio-on':locktime==60}"></span>非活动状态1小时</span>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>安全口令</legend>
+			<div class="setting-select3">
+				<label>修改安全口令</label>
+				<button class="modify-icon" ng-click="modifypassword()">修改</button>
+			</div>
+		</fieldset>
+	</div>
+</div>

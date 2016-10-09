@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="572,402" caption="0,0,0,36" roundcorner="4,4" >
+    <Font name="微软雅黑" size="22" bold="true" italic="true"/>  <!-- size0 -->
+    <Font name="微软雅黑" size="24" />   <!--size1 -->
+    <Font name="微软雅黑" size="16" />   <!--size2 -->
+    <Font name="微软雅黑" size="14"  />      <!--size3 -->
+    <Font name="微软雅黑" size="12" />    <!--size4 -->
+    <Font name="微软雅黑" size="14" bold="true" />  
+    <Font name="微软雅黑" size="24" bold="true" />
+	<VerticalLayout bordersize="1" bordercolor="#FF768D9B" borderround="5,5" inset="1,1,1,1" >
+        <VerticalLayout height="250" bkimage="file='img_bk_normal.png'">
+			<HorizontalLayout  height="35">
+				<HorizontalLayout>
+					<Label name="texttitle" font="2" text="安装" textcolor="#FFF4F8FE" padding="12,12,0,0"/>
+				</HorizontalLayout>
+				<Control />
+				<HorizontalLayout width="71" >
+					<Button name="BTN_MIN" width="30" height="25" padding="5,5,0,0" normalimage="file='btn_min_normal.png' " hotimage="file='btn_min_hover.png'" pushedimage="file='btn_min_push.png'"/>
+					<Button name="BTN_CLOSE" width="30" height="25" padding="5,5,0,0" normalimage="file='btn_close_normal.png' " hotimage="file='btn_close_hover.png'" pushedimage="file='btn_close_push.png'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+			<VerticalLayout height="215">
+			 <AlphaImage float="true" bkimage="01.jpg|02.jpg|03.jpg" stay="2000" pos="50,0,0,0" width="480" height="200" bkcolor="#FFFFFFFF" />   
+			</VerticalLayout>
+			</VerticalLayout>
+			<VerticalLayout  bkcolor="#FFFFFFFF" height= "152">
+			<Button name="QUICKINSTALL" text="快速安装" width="242" height="54" padding="165,38,0,0" font="1" textcolor="#FFFFFFFF" disabledtextcolor="#FF333333" align="center" normalimage="file='btn_quick_normal.png' corner='5,5,5,5'" hotimage="file='btn_quick_hover.png' corner='5,5,5,5'" pushedimage="file='btn_quick_push.png' corner='5,5,5,5'" disabledimage="file='btn_quick_disable.png' corner='5,5,5,5'"/>
+			<Control height="30"/>
+			<HorizontalLayout height="30">
+				<CheckBox name="AGREE" height="20" width="100" padding="36,0,0,0" font="4" text="已阅读并同意" textcolor="#FF868484" textpadding="20,0,0,0" align="left"  normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+				<Button name="TXT_LICENSE" height="20" width="80"  font="4" text="许可协议" textcolor="#FF0084FF" textpadding="0,0,0,0"align="left" />
+				<Control />
+				<Button name="CUSTBTN" width="86" height="20" padding="0,0,0,20" font="4" textcolor="#FF868484" textpadding="20,0,0,0" align="left" text="自定义安装" bkimage="file='img_custom_down.png' dest='0,3,14,17'"/>
+			</HorizontalLayout>
+	
+		</VerticalLayout>
+		<VerticalLayout name="custom_content" bkcolor="#FFFFFFFF" height="145">
+			<Control height="1" bkimage="line_spe.png"/>
+			<Control height="8"/>
+			<HorizontalLayout height="35">
+				<Text text="安装到：" padding="36,3,0,0" font="4" textcolor="#FF868484"/>
+				<Edit name="TXT_PATH" width="334" height="27" padding="5,0,0,0" font="4" textcolor="#FF868484" text="C:/program" textpadding="21,0,10,0" textcolor="#FF868484" bordersize="1" bordercolor="#FFCCCCCC" endellipsis="true"/>
+				<Button name="BTN_BROWSE" width="95" height="27" padding="16,0,0,0" textpadding="20,2,20,0" font="3" textcolor="#FF868484" align="center" text="浏览" normalimage="file='btn_browser_normal.png'" hotimage="file='btn_browser_hover.png'" pushedimage="file='btn_browser_push.png'"/>
+			</HorizontalLayout>
+             <Control height="5"/>
+			<HorizontalLayout >
+			    <Text name="NEEDSPACE" height="20" text="启动方式" padding="95,0,0,0" font="4" textcolor="#FF3F3F3F"/>
+				<Text name="LEAVESPACE" height="20" text="预装软件" padding="124,0,0,0" font="4" textcolor="#FF3F3F3F"/>
+			</HorizontalLayout>
+			<HorizontalLayout >
+				<Option name="OPT_QUICK" height="20" width="122" padding="95,0,0,0" font="4" text="快速启动栏" textcolor="#FF868484" textpadding="20,0,0,0" align="left" normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+				<Option name="OPT_AT" height="20" width="122" padding="58,0,0,0" font="4" text="安通+" textcolor="#FF868484" textpadding="20,0,0,0" align="left" normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true" />
+			</HorizontalLayout>
+			<HorizontalLayout >
+				<Option name="OPT_DESK" height="20" width="122" padding="95,0,0,0" font="4" text="添加桌面快捷方式" textcolor="#FF868484" textpadding="20,0,0,0" align="left"  normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+				<Option name="OPT_COMM" height="20" width="122" padding="58,0,0,0" font="4" text="通讯助手" textcolor="#FF868484" textpadding="20,0,0,0" align="left"  normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+			</HorizontalLayout>
+			<HorizontalLayout >
+				<Option name="OPT_START" height="20" width="122" padding="95,0,0,0" font="4" text="开机自启动" textcolor="#FF868484" textpadding="20,0,0,0" align="left"  normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+				<Option name="OPT_MAIL" height="20" width="122" padding="58,0,0,0" font="4" text="安全邮件" textcolor="#FF868484" textpadding="20,0,0,0" align="left"  normalimage="file='CheckBox/cbx_disable.png' dest='0,0,15,15'" hotimage="file='CheckBox/cbx_disable_focus.png' dest='0,0,15,15'" selectedimage="file='CheckBox/cbx_hover_sel.png' dest='0,0,15,15'" selected="true"/>
+			</HorizontalLayout>
+		</VerticalLayout>
+    </VerticalLayout>
+</Window>

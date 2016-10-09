@@ -1,0 +1,23 @@
+<div dragable role="dialog" class="notice-dialog-page" h="246" w="518">
+	<form method="post" name="noticeform" ng-submit="ok(loginform.$valid)" novalidate>
+		<div class="notice-dialog-title" ng-show="notice.step1">
+			<p class="dialog-title">意见反馈</p>
+			<i class="close-notice-dialog" ng-click="cancel()"></i>
+		</div>
+		<div class="notice-dialog-content" ng-show="notice.step1">
+			<textarea class="notice-textarea" name="noticeMsg" ng-model="notice.text" placeholder="请将字数限制在500字以内！" ng-maxlength='500' ng-minlength='1' required></textarea>
+			<button class="notice-submit" type="submit" ng-disabled="noticeform.$invalid" ng-class="{'disabled':noticeform.$invalid}">提交</button>
+		</div>
+	</form>
+	<div class="notice-dialog-title1" ng-show="!notice.step1">
+		<p class="dialog-title">意见反馈</p>
+		<i class="close-notice-dialog" ng-click="cancel()"></i>
+	</div>
+	<div class="notice-dialog-confirm" ng-show="!notice.step1">
+		<div class="confirm-content">
+			<p>感谢您的反馈，我们会尽快处理!</p>
+			<button class="notice-confirm" ng-click="ok()">确认</button>
+		</div>
+	</div>
+</div>
+ 

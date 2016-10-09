@@ -1,0 +1,53 @@
+.windows-os .window-operations {
+  float: right;
+  position: relative;
+  height: 25px;
+  width: 85px
+}
+
+.windows-os .window-operations .operation-button {
+  position: absolute;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.windows-os .window-operations .operation-button:before {
+  content: "";
+  font-family: iconfont;
+  font-size: 12px;
+  opacity: .5
+}
+
+.windows-os .window-operations .operation-button:hover:before {
+  opacity: 1
+}
+
+.windows-os .window-operations .operation-button.close-window {
+  right: 10px;
+}
+
+.windows-os .window-operations .operation-button.close-window:before {
+  content: url("../img/button/button03.png");
+}
+
+.windows-os .window-operations .operation-button.mini-window {
+  right: 70px
+}
+ 
+.windows-os .window-operations .operation-button.mini-window:before {
+  content: url("../img/button/button05.png");
+}
+
+.windows-os .window-operations .operation-button.expand-window {
+  right: 40px;
+}
+
+.windows-os .window-operations .operation-button.expand-window:before {
+  content: url("../img/button/button04.png");
+  font-size: 22px
+}
+
+.windows-os #body {
+  border-top: 0 none;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="572,402" caption="0,0,0,36" roundcorner="4,4" >
+  <Font name="微软雅黑" size="22" bold="true" italic="true"/>  <!-- size0 -->
+  <Font name="微软雅黑" size="24" />  <!--size1 -->
+  <Font name="微软雅黑" size="16" />  <!--size2 -->
+  <Font name="微软雅黑" size="14"  />  <!--size3 -->
+  <Font name="微软雅黑" size="12" />  <!--size4 -->
+  <Font name="微软雅黑" size="14" bold="true" />
+  <Font name="微软雅黑" size="24" bold="true" />
+  <Font name="微软雅黑" size="22" />
+  <VerticalLayout bordersize="1" bordercolor="#FF768D9B" borderround="5,5" inset="1,1,1,1" bkimage="file='img_progress.png'" >
+		<HorizontalLayout height="35">
+				<Control />
+				<HorizontalLayout width="35" >
+					<Button name="BTN_CLOSE" width="30" height="25" padding="5,5,0,0" normalimage="file='CloseNormal.png'" />
+				</HorizontalLayout>
+			</HorizontalLayout>
+			<VerticalLayout height="215">
+			</VerticalLayout>
+         <VerticalLayout height= "152">
+		 <HorizontalLayout height="32">
+		<Label name="LBL_DISP" width="100" height="12" padding="32,20,0,0" font="4" text="正在卸载..." textcolor="#FF222222" textpadding="10,0,10,0" textcolor="#FF222222"  endellipsis="true"/>
+		<Label name="LBL_DISP_PER" width="100" height="12" padding="308,20,0,0" font="4" text="0%" textcolor="#FF222222" textpadding="10,0,10,0" textcolor="#FF222222"  endellipsis="true"/>	
+        </HorizontalLayout>		
+		<Progress name="PRO_UNINSTALL" width="508" height="8" padding="32,12,0,0" hor="true" isstretchfore="true" bkimage="file='progress_back.png' corner='12,0,12,8' " foreimage="file='progress_fore.png' corner='3,0,3,0'" align="center"/>
+		</VerticalLayout>
+    </VerticalLayout>
+</Window>

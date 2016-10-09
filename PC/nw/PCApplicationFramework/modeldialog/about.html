@@ -1,0 +1,26 @@
+<div dragable role="dialog" class="notice-dialog-page" h="349" w="498">
+	<div class="about-dialog-title">
+		<p class="dialog-title">{{about.title}}</p>
+		<i class="close-notice-dialog" ng-click="cancel()"></i>
+	</div>
+	<div class="about-container">
+		<div class="carousel slide about-left about-content">
+			<div class="carousel-inner">
+				<div class="item active">
+					<img ng-src="{{about.src}}" alt="{{about.alt}}">
+				</div>
+			</div>
+		</div>
+		<div class="about-right">
+			<div class="about-description">
+				<p ng-bind="currentVersion"></p>
+				<P style="margin-top:47px" ng-bind="about.copyright"></P>
+				<P ng-bind="about.address"></P>
+				<P ng-bind="about.phone"></P>
+			</div>
+			<div>
+				<button class="notice-confirm" ng-click="cancel()">确认</button>
+			</div>
+		</div>
+	</div>
+</div>

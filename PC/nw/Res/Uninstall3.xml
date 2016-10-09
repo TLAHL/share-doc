@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="572,402" caption="0,0,0,36" roundcorner="4,4" >
+  <Font name="微软雅黑" size="22" bold="true" italic="true"/>
+  <!-- size0 -->
+  <Font name="微软雅黑" size="24" />
+  <!--size1 -->
+  <Font name="微软雅黑" size="16" />
+  <!--size2 -->
+  <Font name="微软雅黑" size="14"  />
+  <!--size3 -->
+  <Font name="微软雅黑" size="12" />
+  <!--size4 -->
+  <Font name="微软雅黑" size="14" bold="true" />
+  <Font name="微软雅黑" size="24" bold="true" />
+  <Font name="微软雅黑" size="22" />
+  <VerticalLayout bordersize="1" bordercolor="#FF768D9B" borderround="5,5" inset="1,1,1,1" bkimage="file='img_finish.png'">
+   <HorizontalLayout height="35">
+				<Control />
+				<HorizontalLayout width="35" >
+					<Button name="BTN_CLOSE" width="30" height="25" padding="5,5,0,0" normalimage="file='CloseNormal.png' " hotimage="file='CloseFocus.png'" pushedimage="file='ClosePushed.png'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+			<Control height="215"/>
+      <HorizontalLayout height="152" >
+      <Button name="UNINSTALL_OTHER" text="查看其他应用" width="130" height="34" padding="283,103,0,0" font="5" textcolor="#FFFFFFFF" disabledtextcolor="#FF9A9A9A" align="center" normalimage="file='btn_finish_normal.png' corner='5,5,5,5'" hotimage="file='btn_finish_focus.png' corner='5,5,5,5'" pushedimage="file='btn_finish_normal.png' corner='5,5,5,5'"/>
+      <Button name="UNINSTALL_OK" text="确定" width="130" height="34" padding="12,103,0,0" font="5" textcolor="#FFFFFFFF" disabledtextcolor="#FF9A9A9A" align="center" normalimage="file='btn_finish_normal.png' corner='5,5,5,5'" hotimage="file='btn_finish_focus.png' corner='5,5,5,5'" pushedimage="file='btn_finish_normal.png' corner='5,5,5,5'"/>
+	 </HorizontalLayout>
+    </VerticalLayout>
+</Window>

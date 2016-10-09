@@ -1,0 +1,23 @@
+<div dragable role="dialog" h="226" w="458">
+	<div class="notice-dialog-title1">
+		<p class="dialog-title">芯片正在保护中</p>
+	</div>
+	<div class="notice-dialog-confirm">
+		<form name="lockform"  novalidate>
+			<div class="lock-dialog-content">
+				<div>
+					<input class="login-input change" type="password" name="password" ng-maxlength='16' ng-minlength='6' ng-model="lock.password" placeholder="输入安全口令解锁(6-16位)" required>
+					<div class="errorMsg">
+						<span ng-if="lock.errorMsg" class="wrong-bg">{{lock.errorMsg}}</span>
+					</div>
+					<div class="login-messagediv" ng-if="lock.locked">
+							<p>USB Key已锁死，请<a href="" ng-click="openUrlByDefaultBrowser(lock.url)" class="login-message"> 去解锁 </a>后重试</p>
+					</div>
+				</div>
+				<div class="lock-dialog-subbmit">
+					<button class="login-button" ng-click="ok()"  ng-disabled="lockform.$invalid || lock.locked" ng-class="{'disabled':(lockform.$invalid || lock.locked)}"> 解锁 </button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

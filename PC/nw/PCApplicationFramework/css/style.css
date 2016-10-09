@@ -1,0 +1,179 @@
+.modal-content{
+	border: none !important;
+}
+
+.dialog-header {
+    z-index: 1000000;
+    height: 30px;
+    line-height: 30px;
+    background-color: #4b4341;
+    position: relative;
+    margin-left: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-right: 0px;
+    /* -webkit-app-region: drag; */
+    app-region: drag;
+    border:1px solid #4b4341;
+}
+
+.dialog-title {
+    float: left;
+    color: #fff;
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+.win-buttons {
+    height: 100%;
+    float: right;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+.close-window-btn {
+    font-size: 20px;
+    text-align: center;
+    color: #ddd;
+}
+
+.window-btn {
+    text-align: center;
+    float: left;
+    cursor: default;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 100%;
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+    cursor:pointer !important;
+}
+
+.window-container-about{
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fb6d3b;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 5px;
+}
+
+.update-header{
+    background: #4b4341;
+    text-align: center;
+}
+
+.update-header h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 30px;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.update-body{
+    color:#999;
+    text-align:center;  
+    padding-top: 30px; 
+    padding-bottom:20px;
+    background: #ffffff;
+}
+
+.update-container {
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    background-color:#fcfcfc;
+    height: 326px;
+}
+
+.add-group-button{
+    text-align:center;
+}
+
+.btn-confirm{
+    background-image:url(../img/update_bt1.png);
+    border: none;
+    color: #fff;
+    height: 34px;
+    width: 130px;
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+.btn-default{
+    background-image:url(../img/update_bt1.png);
+    color:#333;
+    height: 34px;
+    width: 130px;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.btn-confirm:hover{
+	background-image:url(../img/update_bt2.png);
+}
+
+.btn-confirm:focus{
+	background-image:url(../img/update_bt2.png);
+}
+
+
+.update-process{
+    padding:10px 30px;
+    text-align: left;
+}
+
+.update-dialog{
+	height: 356px;
+	width:478px;
+}
+
+.processMessage img{
+    margin-left: auto;margin-right: auto;display: block;
+    -webkit-animation: uil-reload-css 1s linear infinite;
+    animation: uil-reload-css 1s linear infinite;
+}
+
+@-webkit-keyframes uil-reload-css {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-180deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes uil-reload-css {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.version-detail{
+	margin-top:10px;
+	height: 80px;
+	overflow:auto;
+}
+
+.version-detail p {
+	margin-top:2px;
+}

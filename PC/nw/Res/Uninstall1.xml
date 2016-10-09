@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="572,402" caption="0,0,0,36" roundcorner="4,4" >
+    <Font name="微软雅黑" size="22" bold="true" italic="true"/>  <!-- size0 -->
+    <Font name="微软雅黑" size="24" />   <!--size1 -->
+    <Font name="微软雅黑" size="16" />   <!--size2 -->
+    <Font name="微软雅黑" size="14"  />      <!--size3 -->
+    <Font name="微软雅黑" size="12" />    <!--size4 -->
+    <Font name="微软雅黑" size="14" bold="true" />  
+    <Font name="微软雅黑" size="24" bold="true" />
+	<VerticalLayout bordersize="1" bordercolor="#FF768D9B" bkimage="file='img_start.png'" borderround="5,5" inset="1,1,1,1" >
+		<HorizontalLayout height="35">
+				<Control />
+				<HorizontalLayout width="35" >
+					<Button name="BTN_CLOSE" width="30" height="25" padding="5,5,0,0" normalimage="file='CloseNormal.png' " hotimage="file='CloseFocus.png'" pushedimage="file='ClosePushed.png'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+		<Control  height="215"/>
+		<HorizontalLayout height="152" >
+			<Button name="CANCEL" text="继续使用" width="130" height="34" padding="279,103,0,0" font="5" textcolor="#FFFFFFFF" disabledtextcolor="#FF9A9A9A" align="center" normalimage="file='btn_cancel_normal.png' corner='5,5,5,5'" hotimage="file='btn_cancel_hover.png' corner='5,5,5,5'" pushedimage="file='btn_cancel_push.png' corner='5,5,5,5'" />
+			<Button name="CONFIRM" text="狠心卸载" width="130" height="34" padding="16,103,0,0" font="5" textcolor="#FFFFFFFF" disabledtextcolor="#FF9A9A9A" align="center" normalimage="file='btn_confirm_normal.png' corner='5,5,5,5'" hotimage="file='btn_confirm_hover.png' corner='5,5,5,5'" pushedimage="file='btn_confirm_push.png' corner='5,5,5,5'" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

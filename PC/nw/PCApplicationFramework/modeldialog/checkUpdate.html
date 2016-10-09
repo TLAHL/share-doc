@@ -1,0 +1,72 @@
+<div dragable class="dialog-header first" h="356" w="458">
+	<div class="dialog-title">检查更新</div>
+	<div class="win-buttons">
+		<!-- <span class="mini-window-btn window-btn" onclick="miniWindow()" ></span> -->
+		<i class="close-notice-dialog" ng-click="cancel()"></i>
+	</div>
+</div>
+<div class="update-container">
+	<div class="update-header">
+		<img src="img/logo01.png">
+		<h1>PC应用框架</h1>
+	</div>
+	<div class="update-body">
+		<!-- 检测版本 -->
+		<!--<div class="update-process" ng-if="state == -1">
+			<p>正在为您检测最新版本...</p>
+			<div class="version-detail">
+			</div>
+		</div>-->
+		<!-- 检测到新版本 -->
+		<div class="update-process" ng-if="state == 0">
+			<div class="version-title">有新版本: {{newVersion}}</div>
+			<div class="version-detail">
+				<p ng-repeat=" item in updateDescription" ng-bind="item"></p>
+			</div>
+			<div class="add-group-button" style="position:absolute; bottom: 20px;left:104px">
+				<input class="btn-confirm btn-large" type="button" ng-click="updateVersion()" value="更新">
+				<input class="btn-confirm btn-large" type="button" value="取消" ng-click="cancel()">
+			</div>
+		</div>
+
+		<!-- 显示错误信息 -->
+		<div class="update-process" ng-if="errcode != 0 && state != -1">
+			<div class="version-title">{{errmsg}}</div>
+			<div class="add-group-button" style="margin-top: 99px;">
+				<input class="btn-confirm btn-large" type="button" ng-click="retryAction()" value="重试">
+				<input class="btn-confirm btn-large" type="button" ng-click="cancel()" value="确定">
+			</div>
+		</div>
+
+		<!-- 检测到版本已是最新 -->
+		<div class="update-process" ng-if="state == 1">
+			<div class="update-already">
+				<div class="update-already-content">
+					<h3>您的PC应用框架已是最新版本</h3>
+					<p>当前版本：<span ng-bind="version"></span></p>
+				</div>
+			</div>
+			<div class="add-group-button" style="margin-top:74px">
+				<input class="btn-confirm btn-large" type="button" ng-click="cancel()" value="确定">
+			</div>
+		</div>
+		
+		<!-- 下载中 -->
+		<div class="update-process">
+			<div class="processMessage" ng-show="state==5 || state == -1">
+				<div class="precess-img" style="margin-top:40px;">
+					<img src="img/down-loading.png" class="uil-reload-css" />
+				</div>
+				<div style="margin-top:20px;text-align: center;" ng-bind="processMessage"></div>
+			</div>
+		</div>
+		
+		<!-- 下载中 -->
+		<div class="update-process" ng-if="state == 6">
+			<div class="version-title">下载更新完成</div>
+			<div class="add-group-button" style="margin-top: 83px">
+				<input class="btn-confirm btn-large" type="button" ng-click="install()" value="安装">
+			</div>
+		</div>
+	</div>
+</div>

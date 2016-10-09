@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="376,199" caption="0,0,0,30" roundcorner="5,5">
+    <Font name="微软雅黑" size="22" bold="true" italic="true"/>  <!-- size0 -->
+    <Font name="微软雅黑" size="24" bold="true" />   <!--size1 -->
+    <Font name="微软雅黑" size="16" />   <!--size2 -->
+    <Font name="微软雅黑" size="14"  />      <!--size3 -->
+    <Font name="微软雅黑" size="12" />    <!--size4 -->
+    <Font name="微软雅黑" size="14" bold="true" />  
+    <Font name="微软雅黑" size="24" bold="true" />
+    <VerticalLayout bordersize="1" bordercolor="#FF4C6C8B" borderround="5,5" inset="1,1,1,1">
+        <VerticalLayout bkimage="file='MessageBox/img_message_bk.png'" height="200">       
+	        <HorizontalLayout height="35" >
+                <HorizontalLayout>
+                    <Label name="texttitle" font="4" textcolor="#FFFFFFFF" padding="10,0,0,0"/>
+                </HorizontalLayout>
+                <Control />
+                <HorizontalLayout width="32">
+                    <Button name="closebtn" width="30" height="25" padding="0,5,0,0" normalimage="file='CloseNormal.png' " hotimage="file='CloseFocus.png'" pushedimage="file='ClosePushed.png'" />
+                </HorizontalLayout>
+            </HorizontalLayout>    
+			<Control height="30"/> 
+            <HorizontalLayout name="notice" height="75"> 
+			    <HorizontalLayout >
+				    <RichEdit name="text" text="" width="260" height="25" font="2" textcolor="#FF333333" padding="50,0,10,10" valign="center" align="left" readonly="true" multiline="true"/>
+			    </HorizontalLayout>
+            </HorizontalLayout>  
+            			
+            <HorizontalLayout height="60" inset="0,11, 80, 0"   >
+                <Control /> 
+                <Button name="btnyes" visible="false" padding="0,0,0,0" width="100" height="40" text="继续" textcolor="#FFFFFFFF" normalimage="file='Button/confirm/btn_normal.png' corner='10,0,10,0'" hotimage="file='Button/confirm/btn_hover.png' corner='10,0,10,0'" pushimage="file='Button/confirm/btn_press.png' corner='10,0,10,0'"/>
+                <Button name="btnno" visible="false" padding="20,0,0,0" width="100" height="40" text="退出卸载" textcolor="#FF333333" normalimage="file='Button/cancel/btn_normal.png' corner='10,0,10,0'" hotimage="file='Button/cancel/btn_hover.png' corner='10,0,10,0'" pushimage="file='Button/cancel/btn_press.png' corner='10,0,10,0'"/>
+                <Button name="btnok" visible="false"  padding="0,0,0,0" width="100" height="40" text="确定" textcolor="#FFFFFFFF" normalimage="file='Button/confirm/btn_normal.png' corner='10,0,10,0'" hotimage="file='Button/confirm/btn_hover.png' corner='10,0,10,0'" pushimage="file='Button/confirm/btn_press.png' corner='10,0,10,0'"/>
+                <Button name="btncancel" visible="false" padding="20,0,0,0" width="100" height="40" text="取消" textcolor="#FF333333" normalimage="file='Button/cancel/btn_normal.png' corner='10,0,10,0'" hotimage="file='Button/cancel/btn_hover.png' corner='10,0,10,0'" pushimage="file='Button/cancel/btn_press.png' corner='10,0,10,0'"/>
+            </HorizontalLayout>
+        </VerticalLayout>
+	</VerticalLayout>
+</Window>

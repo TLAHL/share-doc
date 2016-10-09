@@ -1,0 +1,169 @@
+<div class="login-container">
+	<div id="myCarousel" class="carousel slide login-left"  auto-play-carousel>
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" ng-repeat="item in Carousel.carousels" data-slide-to="{{$index}}" ng-class="{'active': {{$index}} ==0}"></li>
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner">
+			<div class="item" ng-repeat="item in Carousel.carousels" ng-class="{'active': {{$index}} ==0}">
+				<img ng-src="{{item.src}}" alt="{{item.alt}}">
+			</div>
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<!--<a class="carousel-control left" href="#myCarousel" data-ride="carousel" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#myCarousel" data-ride="carousel" data-slide="next">&rsaquo;</a>-->
+	</div>
+	<div class="login-right">
+		<form method="post" style="width:100%" name="loginform" ng-submit="loginApp(loginform.$valid)" novalidate>
+			<div class="login-header">
+				<window-operations>
+					<div class="window-operations">
+						<ul>
+							<li class="operation-button login-close-window" ng-click="quitWindow()"></li>
+							<li class="operation-button login-mini-window" ng-click="minWindow()"></li>
+						</ul>
+					</div>
+				</window-operations>
+			</div>
+			<div class="login-form login-pane login-page ng-scope">
+				<div ng-if="key.status =='success' ||key.status =='snerror' || key.status =='s6' || key.status =='error' || key.status =='neterror'">
+					<div class="login-title">
+						<div class="login-title-name">登录安通账号</div>
+					</div>
+					<div class="clearfix login-body">
+						<div class="login-account">
+							<input class="login-input account" readonly="true" ng-model="login.account">
+							<i class="accountIcon iconfont">   
+	                    	</i>
+						</div>
+						<div class="login-password">
+							<input class="login-input" ng-change="clearErrorMsg()" type="password" name="verification" ng-maxlength='16' ng-minlength='6' ng-model="login.password" placeholder="输入安全口令" required>
+							<i class="passwordIcon iconfont">   
+	                    	</i>
+						</div>
+						<div class="errormsg">
+							<span ng-class="{'wrong-bg':login.errorMsg}">{{login.errorMsg}}</span>
+						</div>
+						<div class="login-messagediv" ng-if="!FindPassword.hide && !key.locked">
+							<p><a href="" ng-click="openUrlByDefaultBrowser(FindPassword.url)" class="login-message"> 忘记安全口令？ </a></p>
+						</div>
+						<div class="login-messagediv" ng-if="key.locked">
+							<p>USB Key已锁死，请<a href="" ng-click="openUrlByDefaultBrowser(FindPassword.lockUrl)" class="login-message"> 去解锁 </a>后重试</p>
+						</div>
+						<div class="login-subbmit">
+							<button class="login-button" type="submit" ng-disabled="loginform.$invalid || key.locked" ng-class="{'disabled':(loginform.$invalid || key.locked)}"> 登录 </button>
+						</div>
+						<div class="login-comment" ng-if="!GetATAccount.hide">
+							<span>没有安通账号？</span>
+							<a class="login-message login-hit" href="" ng-click="openUrlByDefaultBrowser(GetATAccount.url)">如何获取</a>
+						</div>
+					</div>
+				</div>
+				<div ng-if="key.status =='s7'" class="key-check-message">
+					<div class="error-message">
+						<p>电脑上插入多个USBKey，不能登录</p>
+					</div>
+					<div class="error-comment">
+						<p>第一步：保证电脑上只插入一个USB Key</p>
+					</div>
+					<div class="error-comment">
+						<p>第二步：点击刷新按钮   </p>
+		  			</div>
+					<div class="error-refresh">
+						<button class="login-button" ng-click="loginPage()"> 刷新 </button>
+					</div>
+				</div>
+				<div ng-if="key.status =='s3'" class="key-check-message">
+					<div class="error-message">
+						<p>未检测到安全芯片，请确认已连接安全芯片设备</p>
+					</div>
+					<div class="error-comment">
+						<p>第一步：将USBKey插入电脑</p>
+					</div>
+					<div class="error-comment">
+						<p>第二步：点击刷新按钮   </p>
+					</div>
+					<div class="error-refresh">
+						<button class="login-button" ng-click="loginPage()"> 刷新 </button>
+					</div>
+				</div>
+				<div ng-if="key.status =='nomalerror'" class="key-check-message">
+					<div class="error-message">
+						<p>检测失败，请检查网络是否正确或稍后重试</p>
+					</div>
+					<div class="error-refresh">
+						<button class="login-button" ng-click="loginPage()"> 刷新 </button>
+					</div>
+				</div>
+				<div ng-if="key.status =='s4'" class="key-check-message1">
+					<div class="error-message">
+						<!--<p>安全芯片未被录入云平台，不能登录！</p>-->
+					</div>
+					<div class="error-message">
+						<p>安全芯片未被录入云平台，不能登录！</p>
+						<p>请咨询客服：400-888-7801</p>
+						<p>卡号：<span id="s4-cardNo">{{key.cardId}}</span></p>
+					</div>
+					<div class="error-message">
+						<p>你还可以更换安全芯片设备，再进行验证尝试  </p>
+					</div>
+				</div>
+				<div ng-if="key.status =='s5'" class="key-check-message1">
+					<div class="error-message">
+						<!--<p>安全芯片未被录入云平台，不能登录！</p>-->
+					</div>
+					<div class="error-message">
+						<p>检测失败！</p>
+						<p>请重启后重试或咨询客服：400-888-7801</p>
+					</div>
+					<div class="error-refresh">
+						<button class="login-button" ng-click="quitWindow()"> 关闭 </button>
+					</div>
+				</div>
+				<div ng-if="key.status =='nomal'" class="key-check-message1">
+					<div class="error-message" ng-if="key.locked">
+						<p>检测失败！</p>
+						<div class="login-messagediv">
+							<p>USB Key已锁死，请<a href="" ng-click="openUrlByDefaultBrowser(FindPassword.lockUrl)" class="login-message"> 去解锁 </a>后重试</p>
+						</div>
+					</div>
+					<div class="error-message" ng-if="!key.locked">
+						<p>检测失败！</p>
+						<p><span ng-class="{'wrong-bg':login.errorMsg}" ng-bind-html="login.errorMsg"></span></p>
+					</div>
+				</div>
+				<div ng-if="key.status =='loadding'" class="key-check-loadding">
+					<div>
+						<i class="icon-loadding">
+						</i>
+					</div>
+					<div class="loadding-message">
+						<p>正在检测登录环境</p>
+					</div>
+				</div>
+				<div ng-show="key.notice" class="key-notice-dialog">
+					<div class="">
+						<div><i class="close-dialog" ng-click="key.notice = false"></i></div>
+						<div ng-if="key.status =='snerror'" class="notice-message">
+							<p>安全芯片证书不可用！</p>
+							<p>请咨询客服：400-888-7801</p>
+							<!--<p>（证书SN：<span id="s5-cartSN"></span>）</p>-->
+						</div>
+						<div ng-if="key.status =='s6'" class="notice-message">
+							<p>USBKey已被锁死，只有解锁后才能使用</p>
+						</div>
+						<div ng-if="key.status =='error'" class="notice-message">
+							<p>登录失败！</p>
+							<p>请重启后重试或咨询客服：400-888-7801</p>
+						</div>
+						<div ng-if="key.status =='neterror'" class="notice-message">
+							<p>登录失败！</p>
+							<p>请检查网络是否正确或者稍后重试！</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

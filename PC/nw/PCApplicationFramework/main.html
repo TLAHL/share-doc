@@ -1,0 +1,94 @@
+<div style="width:100%">
+	<div id="header" class="main-header">
+		<div class="main-logo">
+			<img ng-hide="Logo.hide" ng-src="{{Logo.icon}}">
+		</div>
+		<div>
+			<window-operations>
+				<div class="window-operations">
+					<ul>
+						<li ng-hide="hideSettinggMenu" class="operation-button more-window" ng-click="openMenu($event)"></li>
+						<li class="operation-button mini-window" ng-click="minWindow()"></li>
+						<li ng-show="isMax" class="operation-button restore-window" ng-click="restoreWindow();isMax =!isMax"></li>
+						<li ng-show="!isMax" class="operation-button expand-window" ng-click="maxWindow();isMax = !isMax"></li>
+						<li ng-if="!isClose" class="operation-button close-window" ng-click="closeWindow()"></li>
+						<li ng-if="isClose" class="operation-button close-window" ng-click="quitWindow()"></li>
+					</ul>
+				</div>
+			</window-operations>
+			<div ng-hide="TopSearch.hide" class="search-bar-wraper toleft" ng-class="{'toright':TopSearch.position}">
+				<ul style="float:left; width:240px">
+					<li>
+						<input class="search-text" type="text" ng-model="TopSearch.searchvalue" placeholder="搜索" ng-focus="TopSearch.focus = true"></input>
+					</li>
+				</ul>
+				<i class="searchIcon iconfont" ng-if="!searchBarCtrl.isSearching" ng-click="TopSearch.submitSearch()">   
+                    </i>
+			</div>
+			<ul class="search-result" ng-show="TopSearch.focus && TopSearch.searchvalue && (TopSearch.data | filter:TopSearch.searchvalue).length > 0">
+				<li class="search-item" ng-init="" ng-repeat="item in TopSearch.data | filter:TopSearch.searchvalue" ng-click="TopSearch.click(item.text)">{{item.text}}</li>
+			</ul>
+			<ul style="float:left;">
+				<li class="lockIcon iconfont" ng-click="openLockDialog()">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body" class="aero-container">
+		<div id="menu-pannel" style="border-right:0px">
+			<div ng-class="{'profileButtom': personalInfo.position, 'profile': !personalInfo.position}">
+				<div class="profile-big avatar ng-isolate-scope single-chat" ng-class="{'single-chat' : isSingle, 'group' : !isSingle, 'three':!isSingle &amp;&amp; _icon.length===3}" dd-avatar="" uid="home.$my.userProfileModel.uid" is-show-modal="'true'">
+					<!-- 单人头像 -->
+					<!-- ngIf: isSingle -->
+					<div ng-style="style" ng-if="true" class="ng-scope ng-isolate-scope" ng-click="openPersonalCenter(currentUser.id)">
+						<!-- ngIf: hasUrl -->
+						<!-- ngIf: !hasUrl -->
+						<img ng-src="{{currentUser.url ? currentUser.url : defaultPath}}" />
+						<!-- end ngIf: !hasUrl -->
+					</div>
+					<!-- end ngIf: isSingle -->
+					<!-- 多人头像 -->
+					<!-- ngIf: isGroup -->
+				</div>
+				<p class="name ng-binding" ng-bind="currentUser.name"></p>
+				<div class="tooolbar">
+					<ul style="height:22px;">
+						<li ng-hide="appnotice.hide">
+							<i class="notice-button notice menu-icon" ng-click="openNoticePage()">
+                        		</i>
+						</li>
+						<li>
+							<i class="notice-button setting menu-icon">
+                        		</i>
+						</li>
+						<li> <i class="notice-button notice-number menu-icon">4
+                        		</i> </li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="main-menus" ng-hide="LeftMenu.hide" saveSort="saveSort(data)" sortable>
+				<li ng-repeat="menu in LeftMenu.menus" ng-if="checkMenuStatu(menu)" menuid="{{menu.id}}" class="menu-item at-menu-message" ng-class="{'selected': LeftMenu.selected == menu.name}" ng-click="clickMenu(menu.url); LeftMenu.selected = menu.name">
+					<img ng-if="menu.icon" class="menu-icon" ng-src="{{menu.icon}}" />
+					<span class="text ng-binding" ng-bind="menu.name"></span>
+				</li>
+			</ul>
+		</div>
+		<div id="menu-pannel-body">
+			<iframe ng-if="!isNotice || isSingleApp" style="width:100%" id="mainIframe" src="{{iframe.url}}" frameborder=0 allowfullscreen>
+
+			</iframe>
+			<div class="notice-window-container" ng-if="isNotice && !isSingleApp">
+				<div class="notice-tabs-title">
+					<ul>
+						<li ng-repeat="item in appnotice.items" ng-click="appnotice.selectedIndex=$index" ng-hide="parseBool(item.hide)" ng-class="{'active':appnotice.selectedIndex==$index}">{{item.name}}</li>
+					</ul>
+				</div>
+				<div ng-repeat="item in appnotice.items" class="notice-tabs-body" ng-show="appnotice.selectedIndex==$index">
+					<iframe style="width:100%;height:100%;" src="{{item.url | trusturl}}" frameborder=0 allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

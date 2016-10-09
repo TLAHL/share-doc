@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="420,180" caption="0,0,0,50" roundcorner="5,5">
+    <VerticalLayout width="420" height="180" bkimage="file=&apos;bk1.png&apos; corner=&apos;50,50,5,5&apos;">
+        <Label name="LBL_DISP" float="true" pos="67,55,0,0" width="299" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="BTN_CLOSE" float="true" pos="383,0,0,0" width="37" height="18" bkimage="file=&apos;btn_close.png&apos; source=&apos;0,0,37,18&apos;" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;btn_close.png&apos; source=&apos;0,0,37,18&apos;" hotimage="file=&apos;btn_close.png&apos; source=&apos;37,0,74,18&apos;" pushedimage="file=&apos;btn_close.png&apos; source=&apos;74,0,111,18&apos;" />
+        <Button name="BTN_OK" text="确定" float="true" pos="238,128,0,0" width="68" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;btn.png&apos; source=&apos;0,0,68,27&apos;" hotimage="file=&apos;btn.png&apos; source=&apos;68,0,136,27&apos;" pushedimage="file=&apos;btn.png&apos; source=&apos;136,0,204,27&apos;" />
+        <Button name="BTN_CANCEL" text="取消" float="true" pos="325,128,0,0" width="68" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;btn.png&apos; source=&apos;0,0,68,27&apos;" hotimage="file=&apos;btn.png&apos; source=&apos;68,0,136,27&apos;" pushedimage="file=&apos;btn.png&apos; source=&apos;136,0,204,27&apos;" />
+    </VerticalLayout>
+</Window>
