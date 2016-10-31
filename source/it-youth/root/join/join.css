@@ -1,0 +1,737 @@
+.join-wrapper .banner {
+    background: url("/youth/img/banner2.jpg");
+    background-size: 100% 100%;
+}
+
+.join-wrapper .banner .baoming {
+    display: inline-block;
+    width: 156px;
+    height: 48px;
+    border-radius: 48px;
+    border: 2px solid white;
+    opacity: 0.7;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    color: white;
+    font-size: 18px;
+    line-height: 48px;
+    margin-top: 33px;
+    text-align: center;
+}
+
+.join-wrapper .banner .baoming:hover {
+    background: #36c880;
+    cursor: pointer;
+    border: 2px solid #36c880;
+}
+
+.join-wrapper .banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.join-wrapper .submit {
+    background: #36c880;
+    width: 156px;
+    height: 48px;
+    border-radius: 48px;
+    border: none;
+    margin: 52px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.join-wrapper .tip {
+    font-size: 14px;
+    line-height: 26px;
+    color: #808080;
+}
+
+.join-wrapper .content .biao-enter-items {
+    margin-top: 72px;
+}
+
+.join-wrapper .content .biao-enter-items a {
+    width: 28%;
+    margin-right: 7.02%;
+    cursor: pointer;
+    background: #b2b2b2;
+    color: black;
+    text-align: center;
+    line-height: 76px;
+    height: 76px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.join-wrapper .content .biao-enter-items a.last {
+    margin-right: 0;
+}
+
+.join-wrapper .content .biao-enter-items a:hover {
+    color: white;
+    background-color: #36C880;
+}
+
+.join-wrapper .content .biao-enter-items a .rect-title {
+    height: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+    background: #36c880;
+}
+
+.join-wrapper .content .biao-enter-items a .rect-title.hidden {
+    visibility: hidden;
+}
+
+.join-wrapper .content .biao-enter-items a.active {
+    background: #36c880;
+    text-decoration: none
+}
+
+.join-wrapper .content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.join-wrapper .content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+
+/*流程*/
+
+.join-wrapper .content .process {
+    width: 1224px;
+    margin: auto;
+}
+
+.join-wrapper .content .rect.yellow {
+    background: #ecd433;
+}
+
+.join-wrapper .content .process-item-title {
+    text-align: left;
+    font-size: 20px;
+    margin: 60px 0;
+}
+
+.join-wrapper .content .process hr {
+    float: left;
+    margin: 53px 3px;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.join-wrapper .content .process hr.five {
+    margin: 53px 3px;
+}
+
+.join-wrapper .content .process hr.one {
+    /*width: calc(1.07% - 4px);*/
+    width: 0.5%;
+}
+
+.join-wrapper .content .process hr.two {
+    /*width: calc(1.82% - 8px);*/
+    width: 1%;
+}
+
+.join-wrapper .content .process hr.three {
+    /*width: calc(2.8% - 22px);*/
+    width: 2%;
+}
+
+.join-wrapper .content .process hr.four {
+    /*width: calc(4.82% - 20px);*/
+    width: 2.4%;
+}
+
+.join-wrapper .content .process hr.five {
+    /*width: calc(8.62% - 31px);*/
+    width: 6%;
+}
+
+.join-wrapper .content .process hr.five.it-youth {
+    /*width: calc(4.62% - 31px);*/
+    width: 2.3%;
+}
+
+.join-wrapper .content .process .circle {
+    float: left;
+}
+
+.join-wrapper .content .process .circle.one {
+    width: 7px;
+    height: 7px;
+    background: url("/youth/img/quan44.png");
+    margin-top: 50px;
+}
+
+.join-wrapper .content .process .circle.two {
+    width: 15px;
+    height: 15px;
+    background: url("/youth/img/quan33.png");
+    margin-top: 47px;
+}
+
+.join-wrapper .content .process .circle.three {
+    width: 33px;
+    height: 33px;
+    background: url("/youth/img/quan22.png");
+    margin-top: 40px;
+}
+
+.join-wrapper .content .process .circle.four {
+    width: 51px;
+    height: 51px;
+    background: url("/youth/img/quan11.png");
+    margin-top: 30px;
+}
+
+.join-wrapper .content .process .circle.five {
+    width: 120px;
+    height: 120px;
+    background: url("/youth/img/quan2.png");
+    border-radius: 50px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.join-wrapper .content .process .circle.five .trangle-up {
+    top: 126px;
+    left: 46px;
+    border-bottom: 14px solid #21B7E1;
+}
+
+.join-wrapper .content .process .circle.five .trangle-up.hide {
+    display: none;
+}
+
+.join-wrapper .content .process .circle.five p {
+    color: black;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    background: #21B7E1;
+    padding: 22px;
+    margin-left: -50%;
+    margin-top: 16%;
+    width: 154%;
+}
+
+.join-wrapper .content .process .circle.five p.hide {
+    display: none;
+}
+
+.join-wrapper .content .it-youth .process .circle.five:hover {
+    background: url("/youth/img/quan3.png");
+    cursor: pointer;
+}
+
+.join-wrapper .content .process {
+    margin-bottom: 50px;
+}
+
+.join-wrapper .content .virtual-workplace .process .circle.five:hover {
+    background: url("/youth/img/quan1.png");
+    cursor: pointer;
+}
+
+.join-wrapper .content .virtual-workplace .process .circle.five p {
+    background: #36c880;
+}
+
+.join-wrapper .content .virtual-workplace .process .circle.five .trangle-up {
+    border-bottom: 14px solid #36c880;
+}
+
+.join-wrapper .join-container.hide {
+    display: none;
+}
+
+.join-wrapper .biao-container.hide {
+    display: none;
+}
+
+
+/*内容*/
+
+.join-wrapper .biao-container h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin-top: 124px;
+}
+
+.join-wrapper .biao-container .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 162px 0 0 14px;
+}
+
+
+/*面包屑*/
+
+.join-wrapper .biao-container .crumbs {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 36px;
+}
+
+.join-wrapper .biao-container .crumbs .crumbs-item {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.join-wrapper .biao-container .crumbs .crumbs-item:hover {
+    color: #36C880;
+    text-decoration: underline;
+}
+
+
+/*个人报名表*/
+
+.join-wrapper form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.join-wrapper form .Wdate {
+    background: #f1f1f1 url("/youth/img/datePicker.gif") no-repeat;
+    background-position: 88%;
+}
+
+.join-wrapper form select {
+    width: 47%;
+    height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.join-wrapper form input {
+    width: 47%;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.join-wrapper form .date {
+    text-align: left;
+    margin-bottom: 33px;
+}
+
+.join-wrapper form .date input {
+    width: 15.51%;
+}
+
+.join-wrapper form .date.item-title input {
+    width: 47%;
+}
+
+.join-wrapper form hr {
+    border: none;
+    border-bottom: 1px dotted #e4e4e4;
+    margin: 0 0 33px 0;
+    /*width: 99%;*/
+    width: 96.5%;
+}
+
+.join-wrapper form .item {
+    text-align: left;
+    float: left;
+}
+
+.join-wrapper form .youth-relate {
+    margin-bottom: 20px;
+}
+
+.join-wrapper form span {
+    display: inline-block;
+    width: 64px;
+    text-align: justify;
+    margin-right: 30px;
+}
+
+.join-wrapper form span.free {
+    width: auto;
+}
+
+.join-wrapper form .star {
+    margin-right: 0;
+    width: 5px;
+}
+
+.join-wrapper form .star.red {
+    color: red;
+}
+
+.join-wrapper form span.star-info {
+    width: 70px;
+}
+
+.join-wrapper form li {
+    margin-bottom: 20px;
+}
+
+.join-wrapper form li .item {
+    float: left;
+    width: 33.33%;
+    position: relative;
+}
+
+.join-wrapper form li p {
+    float: left;
+    width: 64px;
+    text-align: center;
+    margin-right: 33px;
+    font-size: 16px;
+}
+
+.join-wrapper form li p span {
+    font-size: 12px;
+    text-align: right;
+}
+
+.join-wrapper form textarea {
+    width: 89%;
+    height: 163px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+.join-wrapper form textarea.ranking {
+    height: 52px;
+}
+
+.join-wrapper form textarea.computerSkills {
+    height: 53px;
+}
+
+.join-wrapper form textarea.evaluation {
+    height: 123px;
+}
+
+
+/*项目报名表*/
+
+.join-wrapper form.biao .item-title {
+    float: left;
+    width: 33.3%;
+    margin: 22px 0;
+    text-align: left;
+    line-height: 52px;
+}
+
+.join-wrapper form.biao .virtual-workplace-name.item-title input {
+    width: 47%;
+}
+
+.join-wrapper form.biao .virtual-workplace-name {
+    text-align: left;
+}
+
+.join-wrapper form.biao .virtual-workplace-relate {
+    text-align: left;
+}
+
+.join-wrapper form.biao .virtual-workplace-relate span.title {
+    margin-right: 0;
+    width: 92px;
+}
+
+.join-wrapper form.biao .virtual-workplace-relate .star {
+    margin-right: 0;
+    width: 5px;
+}
+
+.join-wrapper form.biao .radio {
+    width: 14px;
+    height: 14px;
+    background-image: url("/youth/img/button20.png");
+    margin-left: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.join-wrapper form.biao .radio:hover {
+    background-image: url("/youth/img/button221.png");
+}
+
+.join-wrapper form.biao .radio.select {
+    background-image: url("/youth/img/button22.png");
+}
+
+.join-wrapper form.biao .members {
+    float: left;
+    margin-top: 200px;
+}
+
+.join-wrapper form.biao .members-table-div {
+    width: 91%;
+    display: inline-block;
+}
+
+.join-wrapper form.biao table {
+    width: 100%;
+    margin-bottom: 33px;
+}
+
+.join-wrapper form.biao td {
+    width: 15.7%;
+}
+
+.join-wrapper form.biao .member-title {
+    width: 85px;
+    text-align: center;
+}
+
+.join-wrapper form.biao .project-relate {
+    margin-bottom: 38px;
+}
+
+.join-wrapper form.biao .virtual-workplace-relate span {
+    width: 113px;
+}
+
+.join-wrapper form.biao ul .item span {
+    width: 73px;
+    margin-right: 21px;
+}
+
+.join-wrapper form.biao ul .item .star {
+    width: 5px;
+}
+
+.join-wrapper form.biao table input {
+    width: 86%;
+    height: 52px;
+    margin: 10px auto;
+}
+
+.join-wrapper form.biao select {
+    width: 86%;
+    height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.join-wrapper form.biao .item select {
+    width: 47%;
+}
+
+.join-wrapper form.biao table .radio {
+    margin: 0 0 0 10px;
+}
+
+.join-wrapper form.biao .estimation {
+    width: 80%;
+    height: 184px;
+}
+
+
+/*自定义下拉菜单标签*/
+
+.join-wrapper span.select-value {
+    width: 86%;
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    text-indent: 2em;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url("/youth/img/xiala.png");
+    background-repeat: no-repeat;
+    background-position: 88%;
+}
+
+.join-wrapper ul.select {
+    position: absolute;
+    width: 11.5%;
+}
+
+.join-wrapper ul.select.hide {
+    display: none;
+}
+
+.join-wrapper ul.select li {
+    width: 86%;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    background: white;
+    text-indent: 2em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.join-wrapper ul.select li:hover {
+    background: #36C880;
+}
+
+.join-wrapper form.biao ul .item span.select-value {
+    width: 47%;
+    background-position: 88%;
+    margin-right: 0;
+}
+
+.join-wrapper form.biao ul .item ul.select {
+    width: 54.4%;
+    left: 99px;
+    z-index: 1;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    z-index: 1;
+    display: none;
+}
+
+.mask.show {
+    display: block;
+}
+
+.detail {
+    position: fixed;
+    width: 1300px;
+    min-height: 500px;
+    max-height: 750px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+}
+
+.detail.show {
+    display: block;
+    overflow: auto;
+}
+
+
+/*详情页样式*/
+
+.detail-wrapper {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    min-width: 1116px;
+    padding-bottom: 50px;
+}
+
+.detail-wrapper .tip {
+    color: red;
+    position: absolute;
+    top: 34px;
+    right: 500px;
+    font-size: 18px;
+}
+
+.detail-wrapper table {
+    border-collapse: collapse;
+}
+
+.detail-wrapper .members .title.total {
+    width: 191px;
+}
+
+.detail-wrapper td {
+    width: 155px;
+    border: 1px solid #cfcfcf;
+    height: 34px;
+    font-size: 16px;
+    max-width: 155px;
+    word-wrap: break-word;
+    padding: 2px 17px;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.detail-wrapper td.title {
+    background: #F1F1F1;
+    width: 167px;
+    text-align: center;
+}
+
+.detail-wrapper td.title.long {
+    height: 100px;
+}
+
+.detail-wrapper #overview {
+    height: 300px;
+}
+
+.detail-wrapper .detail-header {
+    margin-top: 10px;
+}
+
+.detail-wrapper .send-time {
+    float: left;
+    font-size: 20px;
+    line-height: 54px;
+    height: 54px;
+    margin: 20px 0;
+}
+
+.detail-wrapper .close {
+    float: right;
+    background: url("/youth/img/close.png");
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.detail-wrapper .close:hover {
+    background: url("/youth/img/close_hover.png");
+}
+
+.clear {
+    clear: both;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<!--         <useJansi>true</useJansi> -->
+        <Target>System.out</Target>
+        <encoder>
+<!--             <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger - %msg%n</pattern> -->
+            <pattern>[vwp]%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%file:%line] - %msg%n</pattern>
+	       	<charset class="java.nio.charset.Charset">GBK</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      		<level>info</level>		<!-- only show error msg in stdout  -->
+    	</filter>
+    </appender>
+     <appender name="ERROR_LOG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>../logs/vwp/vwp-error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>../logs/vwp/vwp-error.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[vwp]%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%file:%line] - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>warn</level>		<!-- only log warn/error msg -->
+		</filter>
+	</appender>
+	<appender name="NORMAL_LOG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>../logs/vwp/vwp.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>../logs/vwp/vwp.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[vwp]%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%file:%line] - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>info</level>		<!-- only log warn/error msg -->
+		</filter>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>50MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+	<logger name="org.hibernate.hql.ast.AST" level="error" />
+	<logger name="org.hibernate.cache" level="error" />
+	<logger name="org.hibernate.type" level="error" />
+	<logger name="org.hibernate.hql" level="error" />
+	<logger name="net.sf.hibernate.cache" level="error" />
+	<logger name="org.hibernate.jdbc" level="error" />
+	<logger name="org.hibernate.SQL" level="error" />
+	<logger name="org.hibernate.transaction" level="error" />
+	<logger name="org.hibernate" level="error" />
+	<logger name="org.hibernate.tool.hbm2ddl" level="error" />
+	<logger name="com.xdja" level="info"></logger>
+	<root level="debug">				<!-- level=trace/debug/info/warn/error/all/off -->
+    	<appender-ref ref="STDOUT" />
+    	<appender-ref ref="ERROR_LOG" />
+    	<appender-ref ref="NORMAL_LOG" />
+  	</root>
+</configuration>

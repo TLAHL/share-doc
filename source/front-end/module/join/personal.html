@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>加入我们</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/front/module/join/join.css">
+    <link rel="stylesheet" type="text/css" href="/front/module/join/personal.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li><a href="/front/module/home/home.html">首页</a></li>
+                <li><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li class="now"><a href="/front/module/join/join.html">加入我们</a></li>
+                <li><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h1>Join us</h1>
+                <h2>虚拟职场-IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <div class="title">
+                <h1>在线报名</h1>
+                <div class="rect"></div>
+                <div class="clear"></div>
+            </div>
+            <ul class="biaoming">
+                <li class="personal active">
+                    <div class="rect-title"></div>
+                    <a href="/front/module/join/personal.html">个人在线报名表</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="project">
+                    <div class="rect-title hidden"></div>
+                    <a href="/front/module/join/project.html">项目在线报名表</a>
+                    <div class="clear"></div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <form class="personal-biao">
+                <div class="date">
+                    <span>报名日期</span>
+                    <input id="sendTime" disabled="disabled"></input>
+                    <span class="star">*</span>
+                    <span class="star-info">为必填项</span>
+                    <span class="star red">*</span>
+                    <span class="star-info">为输入有误</span>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span>姓名</span>
+                            <input id="name" onkeyup="regVal.call(this,'name')" maxlength="6"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>性别</span>
+                            <select id="sex">
+                                <option>请选择</option>
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <span>身份证号</span>
+                            <input id="cardId" onkeyup="regVal.call(this,'cardId')" onblur="VerifyCardId()" maxlength="18"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <span>入学时间</span>
+                            <input id="admissionTime" type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" readonly="readonly" datatype="*" nullmsg="请选择入学时间" sucmsg=" ">
+                        </div>
+                        <div class="item">
+                            <span>学校</span>
+                            <input id="school" disabled="disabled"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>专业</span>
+                            <input id="major" onkeyup="regVal.call(this,'major')"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <span>年级</span>
+                            <select id="education">
+                                <option>请选择</option>
+                                <option>大一</option>
+                                <option>大二</option>
+                                <option selected="selected">大三</option>
+                                <option>研一</option>
+                                <option>研二</option>
+                            </select>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>电话</span>
+                            <input id="phone" onkeyup="regVal.call(this,'phone')" maxlength="11"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>Email</span>
+                            <input id="email" onkeyup="regVal.call(this,'email')"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li class="describe">
+                        <p>所获奖励<span>限200字</span></p>
+                        <textarea id="reward" class="reward" placeholder="" maxlength="200"></textarea>
+                        <div class="clear"></div>
+                    </li>
+                    <li class="describe">
+                        <p>成绩排名</p>
+                        <textarea id="ranking" class="ranking" maxlength="50"></textarea>
+                        <div class="clear"></div>
+                    </li>
+                    <li class="describe">
+                        <p>培训经历<span>限300字</span></p>
+                        <textarea id="experience" placeholder="" maxlength="300"></textarea>
+                        <div class="clear"></div>
+                    </li>
+                    <li class="describe">
+                        <p>掌握的计算机语言<span>必填项</span></p>
+                        <textarea id="computerSkills" class="computerSkills" maxlength="200"></textarea>
+                        <div class="clear"></div>
+                    </li>
+                    <li class="describe">
+                        <p>自我评价<span>必填项</span><span>限300字</span></p>
+                        <textarea id="evaluation" class="evaluation" maxlength="300"></textarea>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+            </form>
+            <button id="submit" class="submit" onclick="submit()">提交</button>
+            <p class="tip">提交成功后，请耐心等待我们的电话或邮件通知！</p>
+            <p class="tip">欢迎加入[西邮虚拟职场]官方QQ群：234210993 交流互动！</p>
+        </div>
+        <a class="back-to-up hide" href="#top"></a>
+    </div>
+    <div class="mask"></div>
+    <div id="detail" class="detail" data-id=""></div>
+    <div class="footer">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+    <script type="text/javascript" src="/front/libs/WdatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/front/common/js/toast.js"></script>
+    <script type="text/javascript" src="/front/libs/handlebars/handlebars.js"></script>
+    <script type="text/javascript" src="/front/module/join/personal.js"></script>
+</body>
+
+</html>

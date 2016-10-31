@@ -1,0 +1,126 @@
+.banner {
+    background: url("/front/common/img/banner1.png");
+    background-size: 100% 100%;
+}
+
+
+/*内容*/
+
+.content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+
+/*虚拟职场*/
+
+.content .workplace .block {
+    width: 42%;
+    float: left;
+}
+
+.content .workplace .block.what {
+    margin-right: 80px;
+}
+
+.content .workplace .block .title {
+    width: 146px;
+    height: 146px;
+    float: left;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    line-height: 135px;
+    margin-top: 10px;
+    margin-right: 22px;
+}
+
+.content .workplace .title.what {
+    background-color: #ecd433;
+}
+
+.content .workplace .title.why {
+    background-color: #36c880;
+}
+
+.content .text {
+    float: left;
+    width: 42%;
+}
+
+.content .img-div {
+    float: left;
+    width: 42%;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 34px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.content .workplace p {
+    width: calc(100% - 169px);
+    float: left;
+}
+
+.content .workplace .block.why li {
+    font-size: 14px;
+    line-height: 34px;
+    text-align: left;
+}
+
+
+/*创建意义*/
+
+
+/*.content .meaning h2 {
+    font-size: 16px;
+    line-height: 34px;
+    text-align: left;
+}*/
+
+
+/*平台支持*/
+
+.content .support .text {
+    margin-left: 76px;
+    width: calc(42% - 76px);
+}
+
+.content .support p {
+    text-indent: -76px;
+}
+
+.content .support span {
+    font-weight: bolder;
+    margin-right: 61px;
+    float: left;
+    font-size: 14px;
+    line-height: 34px;
+}
+
+
+/*创建单位背景*/
+
+.content .background h3 {
+    font-size: 16px;
+    line-height: 34px;
+    text-align: left;
+}

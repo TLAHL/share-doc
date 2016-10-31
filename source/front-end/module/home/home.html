@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>虚拟职场</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+    <div class="wrapper home">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li class="now"><a href="/front/module/home/home.html">首页</a></li>
+                <li><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li><a href="/front/module/join/join.html">加入我们</a></li>
+                <li><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="home-content" class="summary gradient">
+                <div class="more" onclick="moreInfo.call(this)">More</div>
+            </div>
+            <div class="list">
+                <div class="radio now" onclick="jump.call(this,0)"></div>
+                <div class="radio" onclick="jump.call(this,1)"></div>
+                <div class="radio" onclick="jump.call(this,2)"></div>
+                <div class="radio" onclick="jump.call(this,3)"></div>
+            </div>
+        </div>
+        <div class="footer-home">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    </div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+    <script type="text/javascript" src="/front/libs/handlebars/handlebars.js"></script>
+    <script id="item-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="item {{#isShow @index}}{{/isShow}}" data-index={{@index}}>
+            <div class="info">
+                <div class="title">
+                    <h1>{{h1}}</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                    <h2>{{h2}}</h2>
+                    <h3>{{h3}}</h3>
+                </div>
+                <hr>
+                <div class="describe">
+                    <h2>{{dh2}}</h2> {{#with p}} {{#each this}}
+                    <p>{{this}}</p>
+                    {{/each}} {{/with}}
+                </div>
+                <hr>
+            </div>
+            {{#if first}}
+            <div class="station">西安站
+                <p>Xi'an</p>
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="/front/module/home/home.js"></script>
+</body>
+
+</html>

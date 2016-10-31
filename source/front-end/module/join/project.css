@@ -1,0 +1,81 @@
+.content form .project-name input {
+    width: 15.51%;
+    text-indent: 0;
+    text-align: center;
+}
+
+.content form .project-name {
+    text-align: left;
+}
+
+.content form .project-relate {
+    text-align: left;
+}
+
+.content form .project-relate .title {
+    margin-right: 0;
+    width: 64px;
+}
+
+.content form .project-relate .star {
+    margin-right: 0;
+    width: 5px;
+}
+
+.content form .radio {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.content form td {
+    width: 15.7%;
+}
+
+.content form .member-title {
+    width: 85px;
+    text-align: left;
+}
+
+.content form .project-relate span {
+    width: 113px;
+}
+
+.content form ul .item span {
+    width: 73px;
+    margin-right: 21px;
+}
+
+.content form ul .item .star {
+    width: 5px;
+}
+
+.content form table input {
+    width: 86%;
+    height: 52px;
+    margin: 10px 7px;
+}
+
+.content form select {
+    width: 86%;
+    height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.content form .item select {
+    width: 47%;
+}
+
+.content form table .radio {
+    margin: 0 0 0 10px;
+}
+
+.content form .estimation {
+    width: 80%;
+    height: 184px;
+}

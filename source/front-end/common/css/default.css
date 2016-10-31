@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1 }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: inherit; }
+ol,ul,li{list-style:none}
+input, button, textarea, select, optgroup, option { font-family:"微软雅黑"; font-size:14px;font-weight: normal; font-style: inherit; background-color: transparent; }
+input, button, textarea, select { *font-size:100%;outline: none;}
+body {font-size:14px; padding-top:0; font-family:"微软雅黑";background-color: #fff;}

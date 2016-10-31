@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>虚拟职场</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="project.css">
+</head>
+
+<body id="top">
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li><a href="/front/module/home/home.html">首页</a></li>
+                <li><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li><a href="/front/module/join/join.html">加入我们</a></li>
+                <li class="now"><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h1>Project is waiting for you</h1>
+                <h2>虚拟职场-IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <div id="list-div" class="">
+                <div class="clear"></div>
+            </div>
+            <div id="detail-div" class="infinite">
+            </div>
+        </div>
+        <a class="back-to-up hide" href="#top"></a>
+    </div>
+    <div class="footer">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+    <script type="text/javascript" src="/front/libs/handlebars/handlebars.js"></script>
+    <script id="list-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <ul>
+            <li class="title" data-index="{{@index}}">
+                <h1>{{name}}</h1>
+                <div class="rect"></div>
+                <div class="clear"></div>
+            </li>
+            {{#with lists}} {{#each this}}
+            <li onclick="showDetail.call(this)" data-index="{{@index}}">{{name}}</li>
+            {{/each}} {{/with}}
+        </ul>
+        {{/each}}
+    </script>
+    <script id="detail-template" type="text/x-handlebars-template">
+        <div class="title">
+            <h1><span onclick="showProjectList()" class="type">{{type}}</span><span>></span>{{name}}</h1>
+            <div class="rect"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="project-detail-content">
+            <div class="item left summary">
+                <h2>项目简介</h2>
+                <p>{{summary}}
+                </p>
+            </div>
+            <div class="item  knowledge">
+                <h2>涉及知识</h2>
+                <p>
+                    {{knowledge}}
+                </p>
+            </div>
+            <div class="clear"></div>
+            <div class="item left members ">
+                <h2>需配人员</h2>
+                <p>{{members}}
+                </p>
+            </div>
+            <div class="item time">
+                <h2>项目时长</h2>
+                <p>{{time}}
+                </p>
+            </div>
+            <div class="clear"></div>
+            <div class="item left teacher">
+                <h2>指导老师</h2>
+                <p>{{teacher}}
+                </p>
+            </div>
+            <div class="clear"></div>
+            <div class="join-project">
+                <p>如果您对此项目感兴趣，请前往<span data-parent-index={{parentIndex}} data-index={{index}} onclick="joinProject.call(this)">【加入我们-项目在线报名】</span>进行报名哦~</p>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript" src="project.js"></script>
+</body>
+
+</html>

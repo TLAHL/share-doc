@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>虚拟职场</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="workplace.css">
+</head>
+
+<body id="top">
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li><a href="/front/module/home/home.html">首页</a></li>
+                <li class="now"><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li><a href="/front/module/join/join.html">加入我们</a></li>
+                <li><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h1>About us</h1>
+                <h2>虚拟职场-IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <div class="workplace">
+                <div class="title">
+                    <h1>虚拟职场</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="what block left">
+                    <div class="what title">what</div>
+                    <p> “虚拟职场”是在“IT青年创新•创业帮”平台上派生的主题项目，是一个全方位资源平台，由郑州信大捷安信息技术股份有限公司（以下简称“信大捷安”）创建，集合了IT领域优秀的技术、投资和运营团队，有着深厚的人脉和商业资源。 “虚拟职场”旨在帮助有志青年在IT领域进行项目实践；助力IT青年技术创新和创业梦想实现。
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="why block">
+                    <div class="why title">why</div>
+                    <ul>
+                        <li>（1）培养大学生实践能力和职业素质；</li>
+                        <li>（2）鼓励、帮助大学生技术创新；</li>
+                        <li>（3）扶持大学生自主创业；</li>
+                        <li>（4）吸引优秀人才投身信息；</li>
+                        <li>（5）深化校企合作，促进共同发展。</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="meaning">
+                <div class="title">
+                    <h1>创建意义</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="text left">
+                    <h2>响应国家信息安全政策和教育政策</h2>
+                    <p>“IT青年创新创业帮”是依托信大捷安移动信息安全平台建立的。国家对网络安全和信息化建设发展高度重视，要求“出台支持企业发展的政策，让他们成为 技术创新主体，成为信息产业发展主体，成为维护网络安全主体。”
+                    </p>
+                    <p>“汇聚人才资源，建设一支政治强、业务精、作风好的强大团队，培养造就世界水平的 科学家、网络科技领军人才、卓越工程师、高水平创新团队。” 教育部鼓励大学生创新创业，鼓励高校建立面向市场的开放式教学体系，把 创业教育纳入人才培养方案，搭建企业和高校毕业生之间的交流和双选平台。</p>
+                    <h2>示范性、引导性、广泛性作用</h2>
+                    <p> 培养大学生创新思维，激发学习、应用、交流的热情，增强动手实践能力。在实现示范性、引导性作用的基础上，通过平台的持续建设</p>
+                </div>
+                <div class="img-div">
+                    <img src="/front/common/img/tu1.png">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="support" id="support">
+                <div class="title">
+                    <h1>平台支持</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="img-div left">
+                    <img src="/front/common/img/tu2.png">
+                </div>
+                <div class="text">
+                    <p><span>资金支持</span>创新研究、创业项目所需资金
+                    </p>
+                    <p><span>专业环境</span>专用空间，计算机、服务器、通讯设备、办公设施， 实验环境、测试环境、网络环境
+                    </p>
+                    <p><span>技术指导</span>在课题研究、项目试验、产品开发过程中，资深技术专家担 任队导师，提供各环节的技术指导和帮助，提供项目管理、 团队协作方面的成功经验
+                    </p>
+                    <p><span>市场资源</span>创业团队广泛接触人脉、清晰创业思路并得到专业指导； 资深运营顾问帮助创业团队挖掘产品的市场价值、商业潜力， 提供市场推广方面的资源和指导
+                    </p>
+                    <p><span>人力资源</span>团队发展需要的人力资源、培训资源</p>
+                    <p><span>后勤保障</span>交通、餐饮、文体活动、健康保障等</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="background" id="background">
+                <div class="title">
+                    <h1>创建单位背景</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="text2">
+                    <div class="left text">
+                        <h3>社会与行业影响力</h3>
+                        <p>信大捷安成立于2004年，是一家专业从事移动信息安全产品研究与开发、移动电子政务/商务安全接入及应用系统集成的高新技术企业。 信大捷安组建有移动信息安全关键技术国家地方联合工程实验室、河南省移动信息安全工程技术研究中心及移动信息安全河南省工程实验室和河南省企业技术中心，以核心成员单位参与发起成立了中国可信计算联盟，参与制订了公安信息移动接入技术规范和国家电网移动安全接入规范等5项行业规范。信大捷安是郑州国家信息安全产品研发生产基地骨干企业，承担有国家信息安全产业化专项、国家重大科技专项、国家863/973课题和若干省市级科技攻关项目，并获得多项科技成果，包括河南省科技进步一等奖1项，二等奖3项，国家密码科技进步奖三等奖1项。
+                        </p>
+                        <p>2015年9月3日国庆70周年大阅兵，公司与38军合作，完美保障通信安全工作，项目结束后，信大捷安获得了“抗战胜利70周年阅兵移动通信安全保障优秀单位”称号。
+                        </p>
+                    </div>
+                    <div class="text">
+                        <h3>技术优势</h3>
+                        <p>信大捷安一直秉承“移动引领、安全筑基”的发展理念，致力于移动信息传输安全方面的研究。截止2014年6月，信大捷安已获批准商用密码产品17项、软件产品31项、计算机信息系统安全专用产品3项、军用信息安全产品1项、国家信息安全测评信息技术产品安全测评证书EAL4+、ELA3证书各1项、软件著作权36项、注册商标7项、发明专利17项、实用新型专利34项；信大捷安基于我国商用密码技术研发的具有完全自主知识产权的移动应用产品、移动安全接入产品、移动终端安全产品、专用密码芯片等系列安全产品，已应用于公安、消防、电力、卫生、金融、海关、税务等多个行业。</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="title">
+                    <h1>校企合作经验</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="text">
+                    <p>信大捷安有着悠久的校企合作历史。多年来保持着与解放军信息工程大学、西安邮电大学、西安电子科技大学、西北工业大学、西北大学、郑州大学、河南工业大学等知名高校的良好合作，在课题研究、人才交流、实践教育等方面积累了丰富经验。并逐年开展校园招聘活动，安排各高校优秀学生实习，接收大批优秀毕业生到企业工作。</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <a class="back-to-up hide" href="#top"></a>
+    </div>
+    <div class="footer">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+.banner {
+    background: url("/front/common/img/banner3.png");
+    background-size: 100% 100%;
+}
+
+
+/*内容*/
+
+.content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+.content ul {
+    float: left;
+    margin-right: 13%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.content ul li.title {
+    cursor: default;
+}
+
+.content ul li.title:hover {
+    color: #3b3b3b;
+}
+
+.content ul li {
+    font-size: 16px;
+    line-height: 34px;
+    color: #3b3b3b;
+}
+
+.content ul li:hover {
+    color: #36c880;
+}
+
+.content .item {
+    float: left;
+    width: 42%;
+    text-align: left;
+}
+
+.content .item h2 {
+    margin: 21px 0;
+}
+
+#detail-div .title .type {
+    cursor: pointer;
+}
+
+.content .join-project {
+    margin-top: 60px;
+}
+.content .join-project p{
+    color: #808080;
+}
+.content .join-project p span {
+    color: #36c880;
+    cursor: pointer;
+}

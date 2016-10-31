@@ -1,0 +1,9 @@
+{
+    "school": ["西安邮电大学", "西北工业大学", "西安电子科技大学", "西安理工大学", "西北大学"],
+    "defaultSchool": 0,
+    "education": ["大一", "大二", "大三", "研一", "研二"],
+    "sex": ["男", "女"],
+    "type": ["信息安全", "应用软件", "智能硬件", "其他"],
+    "qqInfo": ["000", "111", "222", "333", "444"],
+    "emailInfo": ["xy@xdja.com", "xgd@xdja.com", "xd@xdja.com", "xlg@xdja.com", "xbd@xdja.com"]
+}

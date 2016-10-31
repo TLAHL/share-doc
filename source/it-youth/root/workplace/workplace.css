@@ -1,0 +1,135 @@
+.workplace-body .banner {
+    background: url("/youth/img/banner3.jpg");
+    background-size: 100% 100%;
+}
+
+
+/*内容*/
+
+
+/*标题*/
+
+.workplace-body .content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.workplace-body .content .list-div .title h1 {
+    font-size: 20px;
+    line-height: 54px;
+    margin: 12px 0;
+    color: #212121;
+}
+
+.workplace-body .content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+
+/*文字*/
+
+.workplace-body .content .text {
+    float: left;
+    width: 46%;
+    margin-right: 8%;
+}
+
+.workplace-body .content .img-div {
+    float: left;
+    width: 46%; 
+    margin-top: 8px;
+}
+.workplace-body .content .img-div img {
+    width: 100%;
+}
+
+.workplace-body .content p {
+    font-size: 14px;
+    line-height: 34px;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+
+.workplace-body .content ul {
+    float: left;
+    margin-right: 13%;
+    text-align: left;
+    cursor: pointer;
+}
+.workplace-body .content .knowledge ul{
+    text-indent: 2em;
+    margin-right: 0;
+}
+.workplace-body .content .knowledge ul li{
+    font-size: 14px;
+}
+.workplace-body .content ul li.title {
+    cursor: default;
+}
+
+.workplace-body .content ul li.title:hover {
+    color: #3b3b3b;
+}
+
+.workplace-body .content ul li {
+    font-size: 16px;
+    line-height: 34px;
+    color: #3b3b3b;
+}
+
+.workplace-body .content ul li a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.workplace-body .content ul li a:hover {
+    color: #36c880;
+    text-decoration: underline;
+}
+
+.workplace-body .content .item {
+    width: 46%;
+    text-align: left;
+    float: left;
+}
+.workplace-body .content .item.left {
+    margin-right: 8%;
+}
+
+.workplace-body .content .item h2 {
+    margin: 21px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.workplace-body #detail-div .title .type {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.workplace-body #detail-div .title .type:hover {
+    color: #36C880;
+    text-decoration: underline;
+}
+
+.workplace-body .content .join-project {
+    margin-top: 60px;
+}
+
+.workplace-body .content .join-project p {
+    color: #808080;
+}
+
+.workplace-body .content .join-project p span {
+    color: #36c880;
+    cursor: pointer;
+}

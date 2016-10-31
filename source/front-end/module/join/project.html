@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>加入我们</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/front/module/join/join.css">
+    <link rel="stylesheet" type="text/css" href="/front/module/join/personal.css">
+    <link rel="stylesheet" type="text/css" href="/front/module/join/project.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li><a href="/front/module/home/home.html">首页</a></li>
+                <li><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li class="now"><a href="/front/module/join/join.html">加入我们</a></li>
+                <li><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h1>Join us</h1>
+                <h2>虚拟职场-IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <div class="title">
+                <h1>在线报名</h1>
+                <div class="rect"></div>
+                <div class="clear"></div>
+            </div>
+            <ul class="biaoming">
+                <li class="personal">
+                    <div class="rect-title hidden"></div>
+                    <a href="/front/module/join/personal.html?">个人在线报名表</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="project active">
+                    <div class="rect-title"></div>
+                    <a href="/front/module/join/project.html">项目在线报名表</a>
+                    <div class="clear"></div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <form class="project-biao">
+                <div class="date">
+                    <span>报名日期</span>
+                    <input id="sendTime" disabled="disabled"></input>
+                    <span class="star">*</span>
+                    <span class="star-info">为必填项</span>
+                    <span class="star red">*</span>
+                    <span class="star-info">为输入有误</span>
+                </div>
+                <hr>
+                <div class="project-name">
+                    <span>项目名称</span>
+                    <input id="name"></input>
+                    <span>*</span>
+                </div>
+                <hr>
+                <div id="target" class="project-relate">
+                    <span class="title">目标方向</span>
+                    <span class="star">*</span>
+                    <input type="radio" name="targetDirection" class="radio"></input>
+                    <span>创新</span>
+                    <input type="radio" name="targetDirection" class="radio"></input>
+                    <span>创业</span>
+                    <input type="radio" name="targetDirection" class="radio"></input>
+                    <span>其他</span>
+                </div>
+                <hr>
+                <div id="type" class="project-relate">
+                    <span class="title">项目类别</span>
+                    <span class="star">*</span>
+                    <input type="radio" name="projectType" class="radio" value="0"></input>
+                    <span>信息安全</span>
+                    <input type="radio" name="projectType" class="radio" value="1"></input>
+                    <span>应用软件</span>
+                    <input type="radio" name="projectType" class="radio" value="2"></input>
+                    <span>智能硬件</span>
+                    <input type="radio" name="projectType" class="radio" value="3"></input>
+                    <span>其他</span>
+                </div>
+                <hr>
+                <div id="stage" class="project-relate">
+                    <span class="title">项目阶段</span>
+                    <span class="star">*</span>
+                    <input type="radio" name="projectStage" class="radio"></input>
+                    <span>概念阶段</span>
+                    <input type="radio" name="projectStage" class="radio"></input>
+                    <span>产品研发阶段</span>
+                    <input type="radio" name="projectStage" class="radio"></input>
+                    <span>其他</span>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span>项目联系人</span>
+                            <input id="contact" onkeyup="regVal.call(this,'contact')" maxlength="6"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>学校</span>
+                            <input class="school" disabled="disabled"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>专业</span>
+                            <input id="major"></input>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <span>年级</span>
+                            <select id="education">
+                                <option>请选择</option>
+                                <option>大一</option>
+                                <option>大二</option>
+                                <option selected="selected">大三</option>
+                                <option>研一</option>
+                                <option>研二</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <span>电话</span>
+                            <input id="phone" onkeyup="regVal.call(this,'phone')" maxlength="11"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="item">
+                            <span>email</span>
+                            <input id="email" onkeyup="regVal.call(this,'email')"></input>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+                <hr>
+                <table id="team-table">
+                    <tr>
+                        <th></th>
+                        <th>姓名<span class="star membername">*</span></th>
+                        <th>性别<span class="star">*</span></th>
+                        <th>学校<span class="star">*</span></th>
+                        <th>专业<span class="star membermajor">*</span></th>
+                        <th>学历/年级<span class="star">*</span></th>
+                        <th>角色</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" class="member-title">团队成员
+                        </td>
+                        <td>
+                            <input class="membername" onkeyup="regVal.call(this,'membername')" maxlength="6"></input>
+                        </td>
+                        <td>
+                            <select id="sex">
+                                <option>请选择</option>
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="school" disabled="disabled"></input>
+                        </td>
+                        <td>
+                            <input class="membermajor" onkeyup="regVal.call(this,'membermajor')"></input>
+                        </td>
+                        <td>
+                            <select id="education">
+                                <option>请选择</option>
+                                <option>大一</option>
+                                <option>大二</option>
+                                <option>大三</option>
+                                <option>研一</option>
+                                <option>研二</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="role"></input>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <ul>
+                    <li id="overview" class="overview">
+                        <div>
+                            <p>项目概述<span>必填项</span><span>限300字</span></p>
+                            <textarea maxlength="300"></textarea>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </form>
+            <button class="submit" onclick="submit()">提交</button>
+            <p class="tip">提交成功后，请耐心等待我们的电话或邮件通知！</p>
+            <p class="tip">欢迎加入[西邮虚拟职场]官方QQ群：234210993 交流互动！</p>
+        </div>
+        <a class="back-to-up hide" href="#top"></a>
+    </div>
+    <div class="mask"></div>
+    <div id="detail" class="detail" data-id=""></div>
+    <div class="footer">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+    <script type="text/javascript" src="/front/common/js/toast.js"></script>
+    <script type="text/javascript" src="/front/libs/handlebars/handlebars.js"></script>
+    <script id="table-template" type="text/x-handlebars-template">
+        <tr>
+            <td>
+                <input class="membername" maxlength="6"></input>
+            </td>
+            <td>
+                <select id="sex">
+                    <option>请选择</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </td>
+            <td>
+                <input class="school" disabled="disabled"></input>
+            </td>
+            <td>
+                <input class="membermajor"></input>
+            </td>
+            <td>
+                <select id="education">
+                    <option>请选择</option>
+                    <option>大一</option>
+                    <option>大二</option>
+                    <option>大三</option>
+                    <option>研一</option>
+                    <option>研二</option>
+                </select>
+            </td>
+            <td>
+                <input class="role"></input>
+            </td>
+        </tr>
+    </script>
+    <script type="text/javascript" src="project.js"></script>
+</body>
+
+</html>

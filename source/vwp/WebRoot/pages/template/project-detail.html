@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>项目报名表详情页</title>
+    <style type="text/css">
+    body{
+    	font-family:'微软雅黑';
+    }
+    .detail-wrapper {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        min-width: 1000px;
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .detail-wrapper table {
+        border-collapse: collapse;
+        height: 532px;
+        width: 100%;
+    }
+    
+    .detail-wrapper .members .title.total {
+        width: 191px;
+    }
+    
+    
+    .detail-wrapper td {
+        width: 201px;
+        border: 1px solid #cfcfcf;
+        height: 34px;
+        font-size: 16px;
+        max-width: 201px;
+        word-wrap: break-word;
+        cursor: default;
+        text-align: left;
+        padding: 0 5px;
+    }
+    
+    .detail-wrapper td.title {
+        background: #F1F1F1;
+        width: 167px;
+        text-align: center;
+    }
+    
+    .detail-wrapper td.title.long {
+        height: 100px;
+    }
+    
+    .detail-wrapper #overview {
+        height: 300px;
+    }
+    
+    .detail-wrapper .detail-header {
+        margin-top: 10px;
+    }
+    
+    .detail-wrapper .send-time {
+        float: left;
+        font-size: 20px;
+        line-height: 54px;
+        height: 54px;
+        margin: 20px 0;
+    }
+    
+    .detail-wrapper .close {
+        float: right;
+        background: url("/youth/img/close.png");
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-size: 100% 100%;
+    }
+    
+    .detail-wrapper .close:hover {
+        background: url("/youth/img/close_hover.png");
+        background-size: 100% 100%;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .have-read {
+    	color:green;
+        margin: 20px 6.4% 0 0;
+        float: right;
+        height: 54px;
+        font-size: 16px;
+        line-height: 54px;
+        border: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="detail-wrapper">
+        <div class="detail-header">
+            <div id="sendTime" class="send-time">报名日期：#{sendTime}</div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <table cellpadding="0" >
+                <tr>
+                    <td class="title">项目名称</td>
+                    <td colspan="3" id="name">#{name}</td>
+                    <td class="title">项目联系人</td>
+                    <td colspan="2" id="type">#{contact}</td>
+                </tr>
+                <tr>
+                    <td class="title">所在城市</td>
+                    <td colspan="3" id="city">#{city}</td>
+                    <td class="title">学校</td>
+                    <td colspan="2" id="school">#{school}</td>
+                </tr>
+                <tr>
+                    <td class="title">专业</td>
+                    <td colspan="3" id="major">#{major}</td>
+                    <td class="title">年级</td>
+                    <td colspan="2" id="education">#{education}</td>
+                </tr>
+                <tr>
+                    <td class="title">电话</td>
+                    <td colspan="3" id="phone">#{phone}</td>
+                    <td class="title">E-MAIL</td>
+                    <td colspan="2" id="email">#{email}</td>
+                </tr>#{members}
+                <tr>
+                    <td class="title long overview">项目概述</td>
+                    <td colspan="6" id="overview" class="overview-value">#{overview}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="have-read">#{statusAndTime}</div>
+        </div>
+    </div>
+</body>
+</html>

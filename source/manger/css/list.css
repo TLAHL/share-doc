@@ -1,0 +1,578 @@
+body.stop-scroll {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-width: 1340px;
+    min-height: 760px;
+    position: relative;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.wrapper .logo {
+    margin-top: 32px;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+.right{
+    float: right;
+}
+
+span {
+    line-height: 52px;
+}
+
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #000;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: #f1f1f1 url("../img/slide_down.png") no-repeat;
+    background-position: 99%;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/*头部*/
+
+.list .header {
+    height: 104px;
+    background: black;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    color: white;
+}
+
+.list .title-logo {
+    left: 92px;
+    font-size: 34px;
+    line-height: 104px;
+    position: absolute;
+    top: 0;
+}
+
+.list .search-box {
+    width: 400px;
+    height: 48px;
+    line-height: 48px;
+    background: #f1f1f1 url("/manger/img/seacher.png") no-repeat;
+    border-radius: 42px;
+    background-position: 338px;
+    border: none;
+    text-align: left;
+    text-indent: 38px;
+    position: absolute;
+    left: 286px;
+    top: 30px;
+    outline: none;
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.list ul.title {
+    position: absolute;
+    top: 42px;
+    right: 92px;
+}
+
+.list ul.title li {
+    font-size: 18px;
+    line-height: 72px;
+}
+
+.list ul.title li .rect-x {
+    width: 200px;
+    height: 6px;
+    background: #36c880;
+    margin-bottom: 6px;
+    visibility: hidden;
+}
+
+.list ul.title li .biao-title {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+
+.list ul.title li .biao-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.list ul.title li.active .rect-x {
+    visibility: visible;
+}
+
+.list ul.title li.active .biao-title {
+    background: #36c880;
+}
+
+.list .line {
+    height: 12px;
+    background: #36c880;
+}
+
+
+/*内容部分*/
+
+
+/*个人和项目切换*/
+
+.list .virtual-workplace-select {
+    margin: 30px 92px;
+}
+
+.list .virtual-workplace-select li {
+    float: left;
+    width: 44.375%;
+    height: 80px;
+    cursor: pointer;
+}
+
+.list .virtual-workplace-select li.project {
+    margin-bottom: 0;
+    float: right;
+}
+
+.list .virtual-workplace-select li .rect-title {
+    height: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+    background: #36c880;
+}
+
+.list .virtual-workplace-select li .rect-title.hidden {
+    visibility: hidden;
+}
+
+.list .virtual-workplace-select li a {
+    background: #b2b2b2;
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    height: 60px;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+}
+
+.list .virtual-workplace-select li.active a {
+    background: #36c880;
+}
+
+
+/*搜索部分*/
+
+.list .content {
+    margin: 0 92px;
+}
+
+.list .content .filter {
+    font-size: 18px;
+    margin-top: 28px;
+}
+
+.list .content .filter input {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    background: #f1f1f1;
+    padding: 0 16px;
+}
+
+.list .content .filter select {
+    width: 248px;
+    height: 52px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-size: 18px;
+}
+
+.list .content .filter select.short {
+    width: 100px;
+}
+
+.list .content .filter div {
+    margin-right: 22px;
+    height: 38px;
+    position: relative;
+}
+.list .content .filter div.count{
+    margin-right: 0;
+}
+.list .content .filter .Wdate {
+    background: #f1f1f1 url("../img/datePicker.gif") no-repeat;
+    text-indent: inherit;
+    background-position: 88%;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+}
+
+.list table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.list table tr {
+    cursor: pointer;
+}
+
+.list table tr.have-read {
+    background: #DEDEDE
+}
+
+.list table tr:hover {
+    background: #E7E7E7
+}
+
+.list table th {
+    width: 241px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #cfcfcf;
+    background: #f1f1f1;
+    font-weight: normal;
+}
+
+.list table td {
+    width: 241px;
+    height: 52px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #cfcfcf;
+}
+
+.list table tr img.all-select {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.list table tr .select {
+    width: 100px;
+}
+
+.list table tr .select img {
+    vertical-align: middle;
+    cursor: pointer;
+    height: 28px;
+    z-index: 2;
+}
+
+
+/*底部*/
+
+.list .footer {
+    margin: 42px 92px 50px 92px;
+    position: relative;
+}
+
+.list .footer div {
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+.list .footer select {
+    width: 117px;
+    height: 52px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    padding: 0 16px;
+}
+
+.list .footer .total {
+    margin-right: 10%;
+}
+
+.list .footer .change-page {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 200px;
+}
+
+.list .footer .change-page .hide {
+    visibility: hidden;
+}
+
+.list .footer .change-page .change {
+    cursor: pointer;
+}
+
+.list .footer .export {
+    width: 144px;
+    height: 50px;
+    background: #36c880;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-right: 0;
+}
+.list .footer .selected{
+    margin-right: 100px;
+}
+.list td.select {
+    width: 54px;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    z-index: 1;
+    display: none;
+}
+
+.mask.show {
+    display: block;
+}
+
+.detail {
+    position: fixed;
+    width: 1300px;
+    min-height: 500px;
+    max-height: 750px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.detail.show {
+    display: block;
+}
+
+.wrapper.list span.select-value {
+    display: inline-block;
+    width: 136px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    text-indent: 2em;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-position: 108px;
+    margin-right: 0;
+    background-image: url("/manger/img/xiala.png");
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+.wrapper.list ul.select {
+    width: 200px;
+    left: 41px;
+    z-index: 2;
+    position: absolute;
+}
+
+.wrapper.list ul.select.page-number {
+    margin-left: 72px;
+    position: relative;
+}
+
+.wrapper.list ul.select.hide {
+    display: none;
+}
+
+.wrapper.list ul.select li {
+    width: 68%;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    background: white;
+    text-indent: 2em;
+    margin: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.wrapper.list ul.select li:hover {
+    background: #36C880;
+}
+
+
+/*详情页样式*/
+
+.detail-wrapper {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    min-width: 1116px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.detail-wrapper table {
+    border-collapse: collapse;
+    height: 532px;
+}
+
+.detail-wrapper td {
+    width: 201px;
+    border: 1px solid #cfcfcf;
+    height: 34px;
+    font-size: 16px;
+    max-width: 201px;
+    word-wrap: break-word;
+    cursor: default;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.detail-wrapper td.title {
+    background: #F1F1F1;
+    width: 167px;
+    text-align: center;
+}
+
+.detail-wrapper td.title.long {
+    height: 100px;
+}
+
+.detail-wrapper td.title.long.ranking {
+    height: 68px;
+}
+
+.detail-wrapper td.title.long.experience {
+    height: 133px;
+}
+
+.detail-wrapper td.title.long.evaluation {
+    height: 200px;
+}
+
+.detail-wrapper .header {
+    margin-top: 10px;
+}
+
+.detail-wrapper .send-time {
+    float: left;
+    font-size: 20px;
+    line-height: 54px;
+    height: 54px;
+    margin: 20px 0;
+}
+
+.detail-wrapper .close {
+    float: right;
+    background: url("/manger/img/close.png");
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: -60px;
+    top: 12px;
+}
+
+.detail-wrapper .close:hover {
+    background: url("/manger/img/close_hover.png");
+}
+
+.clear {
+    clear: both;
+}
+
+.status {
+    width: 165px;
+    height: 54px;
+    font-size: 18px;
+    line-height: 54px;
+    border: none;
+    background: #E7E7E7;
+    color: black;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.status.have-read {
+    background: #36c880;
+    color: white;
+}
+
+
+/*placeholder*/
+
+.filter .mdc-layer {
+    padding-left: 26px !important;
+    padding-top: 16px !important;
+    z-index: -1;
+}
+
+.title-logo .mdc-layer {
+    left: 326px !important;
+    top: 0 !important;
+}
+
+#toastMessage-div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.toast{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 348px;
+    height: 50px;
+    background: black;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+}

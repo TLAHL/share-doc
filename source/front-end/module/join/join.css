@@ -1,0 +1,243 @@
+.banner {
+    background: url("/front/common/img/banner2.png");
+    background-size: 100% 100%;
+}
+
+.banner .baoming {
+    width: 156px;
+    height: 48px;
+    border-radius: 48px;
+    border: 2px solid white;
+    opacity: 0.7;
+    color: white;
+    font-size: 18px;
+    line-height: 48px;
+    margin-top: 33px;
+    text-align: center;
+}
+
+.banner .baoming:hover {
+    background: #36c880;
+    cursor: pointer;
+    border: none;
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.content .stations {
+    margin-top: 72px;
+}
+
+.content .stations li {
+    float: left;
+    width: 30.55%;
+    height: 123px;
+    margin-right: 4.02%;
+    cursor: pointer;
+}
+
+.content .stations li.wait {
+    margin-right: 0;
+}
+
+.content .stations li .rect-title {
+    height: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+    background: #36c880;
+}
+
+.content .stations li .rect-title.hidden {
+    visibility: hidden;
+}
+
+.content .stations li p {
+    background: #b2b2b2;
+    font-size: 32px;
+    line-height: 103px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    height: 103px;
+    float: left;
+    width: 100%;
+    font-family: "微软雅黑";
+}
+
+.content .stations li.active p {
+    background: #36c880;
+}
+
+.content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+.content .process {
+    width: 1206px;
+    margin: 0 auto;
+}
+
+.content .rect.yellow {
+    background: #ecd433;
+}
+
+.content .process hr {
+    float: left;
+    margin: 53px 3px;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.content .process hr.five {
+    margin: 53px 3px;
+}
+
+.content .process hr.one {
+    width: calc(1.07% - 4px);
+}
+
+.content .process hr.two {
+    width: calc(1.82% - 8px);
+}
+
+.content .process hr.three {
+    width: calc(2.8% - 22px);
+}
+
+.content .process hr.four {
+    width: calc(4.82% - 20px);
+}
+
+.content .process hr.five {
+    width: calc(8.62% - 31px);
+}
+
+.content .process .circle {
+    float: left;
+}
+
+.content .process .circle.one {
+    width: 7px;
+    height: 7px;
+    background: #c5c5c5;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+.content .process .circle.two {
+    width: 16px;
+    height: 16px;
+    background: #c5c5c5;
+    border-radius: 8px;
+    margin-top: 47px;
+}
+
+.content .process .circle.three {
+    width: 34px;
+    height: 34px;
+    background: #c5c5c5;
+    border-radius: 17px;
+    margin-top: 40px;
+}
+
+.content .process .circle.four {
+    width: 51px;
+    height: 51px;
+    background: #c5c5c5;
+    border-radius: 26px;
+    margin-top: 30px;
+}
+
+.content .process .circle.five {
+    width: 120px;
+    height: 120px;
+    background: url("/front/common/img/quan2.png");
+    border-radius: 50px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.content .process .circle.five .trangle-up {
+    top: 126px;
+    left: 46px;
+    border-bottom: 14px solid #36c880;
+}
+
+.content .process .circle.five .trangle-up.hide {
+    display: none;
+}
+
+.content .process .circle.five p {
+    width: 481px;
+    color: black;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    background: #36c880;
+    text-indent: 2em;
+    padding: 22px;
+    margin-left: -177%;
+    margin-top: 16%;
+}
+
+.content .process .circle.five p.hide {
+    display: none;
+}
+
+.content .personal .process .circle.five:hover {
+    background: url("/front/common/img/quan1.png");
+    cursor: pointer;
+}
+
+.content .personal {
+    margin-bottom: 50px;
+}
+
+.content .project {
+    margin-bottom: 200px;
+}
+
+.content .project .process .circle.five:hover {
+    background: url("/front/common/img/quan3.png");
+    cursor: pointer;
+}
+
+.content .project .process .circle.five p {
+    background: #ecd433;
+}
+
+.content .project .process .circle.five .trangle-up {
+    border-bottom: 14px solid #ecd433;
+}
+
+
+/*版权*/
+
+.footer {
+    color: #808080;
+    height: 180px;
+    font-size: 12px;
+    line-height: 128px;
+    padding-left: 8%;
+    bottom: 62px;
+    background: #f8f8f8;
+}

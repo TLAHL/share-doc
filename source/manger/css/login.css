@@ -1,0 +1,144 @@
+.wrapper {
+    min-width: 1340px;
+    min-height: 560px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("/manger/img/bg.jpg");
+    background-size: 100% 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    max-height: 1000px;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+
+/*头部*/
+
+.header {
+    height: 104px;
+    background: black;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    color: white;
+}
+
+.header .title {
+    margin-left: 5%;
+    line-height: 28px;
+    font-size: 21px;
+    padding-top: 20px;
+}
+
+.header .title .rect {
+    width: 16px;
+    height: 50px;
+    background: #36c880;
+    margin-right: 20px;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    top: 104px;
+    right: 0;
+    left: 0;
+}
+
+
+/*中间部分*/
+
+.login-div {
+    width: 436px;
+    height: 228px;
+    margin: auto;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    padding: 110px 130px;
+}
+
+.login-div div {
+    margin-bottom: 20px;
+}
+
+.login-div input {
+    width: 408px;
+    height: 51px;
+    line-height: 51px;
+    background: rgba(198, 198, 198, 0.45);
+    font-size: 18px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    text-indent: 2em;
+    outline: none;
+}
+
+.login-div .login-button {
+    width: 408px;
+    height: 51px;
+    line-height: 51px;
+    font-size: 18px;
+    text-align: center;
+    background: #02c098;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.error.show {
+    display: block;
+}
+
+
+/*placeholder*/
+
+.mdc-layer {
+    padding-left: 26px !important;
+}
+
+#toastMessage-div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.toast {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 260px;
+    height: 50px;
+    background: black;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+}

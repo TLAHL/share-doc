@@ -1,0 +1,86 @@
+.banner {
+    background: url("/youth/img/banner1.jpg");
+    background-size: 100% 100%;
+}
+
+
+/*ÄÚÈÝ*/
+
+.content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+
+/*ÐéÄâÖ°³¡*/
+
+.content .workplace .block {
+    width: 46%;
+    float: left;
+}
+
+.content .workplace .block.what {
+    margin-right: 8%;
+}
+
+.content .workplace .block .title {
+    width: 146px;
+    height: 146px;
+    float: left;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    line-height: 135px;
+    margin-top: 10px;
+    margin-right: 22px;
+}
+
+
+
+.content .text {
+    float: left;
+    width: 46%;
+}
+
+.content .img-div {
+    float: right;
+    width: 46%;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 34px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+ 
+
+
+.workplace img{
+	margin-top: 50px;
+}
+
+.seasonSecond{
+	text-align: left;
+	margin-left: -15px;
+	margin-top: 60px;
+}
+
+
+

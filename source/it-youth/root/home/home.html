@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="Bookmark" href="/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/youth/common/default.css">
+    <link rel="stylesheet" type="text/css" href="/youth/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/youth/root/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/youth/root/home/notice.css">
+</head>
+
+<body>
+    <div class="home-wrapper">
+        <div class="home-wrapper1"></div>
+        <div class="home-wrapper2"></div>
+        <div class="common-wrapper"></div>
+        <div class="home-body">
+            <div id="home-content" class="summary gradient">
+                <div class="more" onclick="moreInfo.call(this)">More</div>
+            </div>
+            <div class="list">
+                <div class="radio now" onclick="jump.call(this,0)"></div>
+                <div class="radio" onclick="jump.call(this,1)"></div>
+            </div>
+        </div>
+        <div class="footer-home">CopyRight © 2010-2016 郑州信大捷安信息技术股份有限公司</div>
+    </div>
+    <script type="text/javascript" src="/youth/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/youth/libs/handlebars/handlebars.js"></script>
+    <script type="text/javascript" src="/youth/common/common.js"></script>
+    <script id="item-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="item {{#isShow @index}}{{/isShow}}" data-index={{@index}}>
+            <div class="info">
+                <div class="title">
+                    <div class="rect"></div>
+                    <h1>{{h1}}</h1>
+                    <div class="clear"></div>
+                    <h2>{{h2}}</h2>
+                </div>
+                <hr>
+                <div class="describe">
+                    <h2>{{dh2}}</h2> {{#with p}} {{#each this}}
+                    <p>{{this}}</p>
+                    {{/each}} {{/with}}
+                </div>
+                <hr>
+            </div>
+            {{#if first}}
+            <div class="station">西安站
+                <p>Xi'an</p>
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+    <script id="notice-template" type="text/x-handlebars-template">
+        <div class="notice1" style="display: none;">
+            <div class="notice-header">
+                <img class="notice-logo" src="/youth/img/notice_logo.png" />
+                <h1>通知公告</h1>
+                <img class="notice-close" src="/youth/img/buttonclose.png" onclick="closeNoticeDia()" />
+            </div>
+            <div class="notice-content">
+                <ul style='line-height:30px;height:30px;padding-left: 0px;'>
+                    {{#each this}}
+                    <li type="none" onclick="goNoticeDetailDia(this)" style="margin: 0 auto;">
+                        {{#if newMsg}}
+                        <img class="notice-logo" src="/youth/img/gonggao1.png" />
+                        <span class="announce-new" title="{{head}}">{{head}}</span>
+                        <span class="date-new">{{datetime}}</span> {{else}}
+                        <img class="notice-logo" src="/youth/img/gonggao2.png" />
+                        <span class="announce" title="{{head}}">{{head}}</span>
+                        <span class="date">{{datetime}}</span> {{/if}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </script>
+    <script id="noticeDetail-template" type="text/x-handlebars-template">
+        <div class="notice-detail" style="display: none;">
+            <div class="noticedetail-header">
+                <h1 title="{{head}}">{{head}}</h1>
+                <img class="noticedetail-close" src="/youth/img/buttonclose.png" onclick="closeNoticeDetailDia()" />
+            </div>
+            <div class="noticedetail-content">
+                <ol>
+                    {{#each content}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            <span class="noticedetail-datetime">{{datetime}}</span>
+        </div>
+    </script>
+    <script type="text/javascript" src="/youth/root/home/noticeJSON.js?time=0713"></script>
+    <script type="text/javascript" src="/youth/root/home/home.js"></script>
+    <script type="text/javascript" src="/youth/root/home/notification.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+.wrapper {
+    min-width: 1348px;
+    min-height: 760px;
+}
+
+
+/*头部*/
+
+.header {
+    min-width: 1348px;
+    height: 104px;
+    background-color: #040304;
+    opacity: 0.75;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1
+}
+
+.header .logo {
+    background: url("../../common/img/logo.png");
+    width: 195px;
+    height: 49px;
+    float: left;
+    margin: 20px 55px;
+}
+
+.header ul {
+    float: right;
+    margin-top: 38px;
+}
+
+.header li {
+    float: left;
+    font-size: 16px;
+    height: 66px;
+    line-height: 66px;
+    padding: 0 58px;
+}
+
+.header li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header li.now {
+    border-bottom: 3px solid #36C880;
+}
+
+.header li.now a {
+    color: #36C880;
+}
+
+.clear {
+    clear: both;
+}
+
+.header .contact {
+    margin-top: 47px;
+    margin-right: 20px;
+    float: right;
+}
+
+.header .contact img {
+    margin-right: 36px;
+    cursor: pointer;
+}
+
+.header .qq-div {
+    position: relative;
+}
+
+.header .qq-div.hide {
+    display: none;
+}
+
+.header .email-div {
+    position: relative;
+}
+
+.header .email-div.hide {
+    display: none;
+}
+
+
+/*向上的三角形*/
+
+.trangle-up {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #A5A7A9;
+    top: -16px;
+    right: 128px;
+    position: absolute;
+}
+
+.header .trangle-up.email {
+    right: 58px;
+}
+
+.header .qq-email-info {
+    width: 216px;
+    height: 98px;
+    background: black;
+    opacity: 0.6;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    padding: 30px;
+}
+
+.header .qq-email-info p {
+    padding-bottom: 8px;
+    color: white;
+}
+
+.header .qq-email-info p.num {
+    font-weight: bolder;
+}
+
+.banner {
+    height: 627px;
+}
+
+.banner .text {
+    float: left;
+    width: 540px;
+    margin-top: 16%;
+    margin-left: 8%;
+    color: white;
+}
+
+.banner .text .rect {
+    width: 38px;
+    height: 6px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.banner .text h1 {
+    font-size: 48px;
+    margin-bottom: 23px;
+    font-family: Arial;
+    font-weight: normal;
+}
+
+.banner .text h2 {
+    font-size: 34px;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+.banner .text p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.content {
+    margin: 15px 8% 48px 8%;
+    text-align: center;
+}
+
+
+/*返回顶部*/
+
+.back-to-up {
+    background: url("../../common/img/zhiding.png");
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 2%;
+    bottom: 7%;
+    z-index: 1;
+}
+
+.back-to-up:hover {
+    cursor: pointer;
+    background: url("../../common/img/zhiding2.png");
+}
+
+.back-to-up.hide {
+    display: none;
+}
+
+
+/*版权*/
+
+.footer {
+    color: #808080;
+    height: 180px;
+    font-size: 12px;
+    line-height: 128px;
+    padding-left: 8%;
+    bottom: 62px;
+    background: #f8f8f8;
+}
+
+::selection {
+    background: #36c880;
+}
+
+.infinite {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 34px;
+    text-align: left;
+}
+
+.content .left {
+    margin-right: 80px;
+}

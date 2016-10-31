@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>虚拟职场</title>
+    <link rel="icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="Bookmark" href="/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/youth/common/default.css">
+    <link rel="stylesheet" type="text/css" href="/youth/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/youth/root/workplace/workplace.css">
+</head>
+
+<body>
+    <div class="workplace-wrapper">
+        <div class="common-wrapper"></div>
+        <div class="workplace-body">
+            <div id="workplace-home-div">
+            </div>
+            <div id="detail-div">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="/youth/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/youth/libs/handlebars/handlebars.js"></script>
+    <script type="text/javascript" src="/youth/common/common.js"></script>
+    <script id="jianjie-template" type="text/x-handlebars-template">
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h2>IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+            </div>
+        </div>
+        <div class="content" id="workplace-content">
+            <div id="jianjie" class="jianjie">
+                <div class="title">
+                    <h1>简介</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="text left">
+                    <p>“虚拟职场”是“IT青年创新•创业帮”的派生项目，面向计算机及相关专业的在读本科生、研究生，通过虚拟职场环境中的系统训练，帮助学生强化专业知识、学习工作方法、积累项目经验、提升职业素养。</p>
+                    <p>环境虽为虚拟，组织结构、角色定位、工作流程、考评标准却与真实无异。我们请专家设计了多类别的虚拟职场项目，学生可根据专业和兴趣进行选择，也可自带项目报名加入，专家都将给予全程指导。除此以外，还有定期授课、技能竞赛、参观交流等活动，临近毕业季还将提供就业咨询建议。</p>
+                    <p>“虚拟职场”的优秀成员，可进入信大捷安实习，参与真实项目，毕业时将有机会直接拿到offer。</p>
+                    <p>自带项目报名加入的学生，如果项目成熟且具备商业价值，也可申请入驻“创新创业帮”，获得全方位支持，实现创业梦想。</p>
+                </div>
+                <div class="img-div">
+                    <img src="/youth/img/tu1.jpg">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="title" id="workplace-title">
+                <h1>职场项目</h1>
+                <div class="rect"></div>
+                <div class="clear"></div>
+            </div>
+            <div id="list-div" class="list-div">
+                <div class="clear"></div>
+            </div>
+    </script>
+    <script id="list-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <ul>
+            <li class="title" data-index="{{@index}}">
+                <h1>{{name}}</h1>
+                <div class="clear"></div>
+            </li>
+            {{#with lists}} {{#each this}}
+            <li class="title list" data-index="{{@index}}"><a>{{name}}</a></li>
+            {{/each}} {{/with}}
+        </ul>
+        {{/each}}
+    </script>
+    <script id="detail-template" type="text/x-handlebars-template">
+        <div class="banner">
+        </div>
+        <div class="content" id="workplace-content">
+            <div class="title">
+                <h1><a href="/youth/root/workplace/workplace.html#workplace-title" class="type">{{type}}</a><span>></span>{{name}}</h1>
+                <div class="rect"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="project-detail-content">
+                <div class="item left summary">
+                    <h2>项目简介</h2>
+                    <p>{{summary}}
+                    </p>
+                </div>
+                <div class="item knowledge">
+                    <h2>涉及知识</h2>
+                    <ul>
+                        {{#each knowledge}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="item left members">
+                    <h2>需配人员</h2>
+                    <p>{{members}}
+                    </p>
+                </div>
+                <div class="item teacher">
+                    <h2>指导老师</h2>
+                    <p>{{teacher}}
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript" src="/youth/root/workplace/workplace.js"></script>
+</body>
+
+</html>

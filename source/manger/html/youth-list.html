@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <title>创新创业帮报名信息</title>
+    <link rel="icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="Bookmark" href="/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/manger/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/manger/css/list.css">
+</head>
+
+<body>
+    <div class="wrapper list">
+        <div class="header">
+        </div>
+        <div class="title-logo">
+            <img src="/manger/img/logo.png" class="logo">
+            <input class="search-box" placeholder="项目名称\联系人\学校" id="search" onkeyup="getListsByCond()"></input>
+        </div>
+        <ul class="title">
+            <li class="left active">
+                <div class="rect-x"></div>
+                <div class="biao-title">
+                    <a href="youth-list.html">创新创业帮报名信息</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li class="left">
+                <div class="rect-x"></div>
+                <div class="biao-title">
+                    <a href="personal-list.html">虚拟职场报名信息</a>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        <div class="line"></div>
+        <div class="content">
+            <div class="filter">
+                <div class="left">
+                    <span>报名时间</span>
+                    <input id="startTime" type="text" class="Wdate" placeholder="请选择起始时间" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',errDealMode:-1,onpicked:function(){getListsByCond()},oncleared:function(){getListsByCond()}})" readonly="readonly" datatype="*" sucmsg=" ">
+                    <span>—</span>
+                    <input id="endTime" type="text" class="Wdate" placeholder="请选择终止时间" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',errDealMode:-1,onpicked:function(){getListsByCond()},oncleared:function(){getListsByCond()}})" readonly="readonly" datatype="*" sucmsg=" ">
+                </div>
+                <div class="left">
+                    <span>年级</span>
+                    <span class="select-value" data-event="click" data-handler="showSelectLists" id="education">请选择</span>
+                    <ul class="select hide">
+                        <li data-event="click" data-handler="selectOneList" class="selected" value="-1">请选择</li>
+                        <li data-event="click" data-handler="selectOneList" value="0">大专及以下</li>
+                        <li data-event="click" data-handler="selectOneList" value="1">大一</li>
+                        <li data-event="click" data-handler="selectOneList" value="2">大二</li>
+                        <li data-event="click" data-handler="selectOneList" value="3">大三</li>
+                        <li data-event="click" data-handler="selectOneList" value="4">大四</li>
+                        <li data-event="click" data-handler="selectOneList" value="5">研一</li>
+                        <li data-event="click" data-handler="selectOneList" value="6">研二</li>
+                        <li data-event="click" data-handler="selectOneList" value="7">研三</li>
+                    </ul>
+                </div>
+                <div class="right count">
+                    <span>在线报名平台用户量统计：</span><span id="userCount"></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <table>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <span>本页显示条数</span>
+                <span class="select-value" data-event="click" data-handler="showSelectLists" id="pageSize">20</span>
+                <ul class="select page-number hide">
+                    <li data-event="click" data-handler="selectOneList" class="selected" value="0">20</li>
+                    <li data-event="click" data-handler="selectOneList" value="1">50</li>
+                    <li data-event="click" data-handler="selectOneList" value="2">100</li>
+                </ul>
+            </div>
+            <div class="left total">
+                <span>总数</span>
+                <span id="total"></span>
+            </div>
+            <div class="left change-page">
+                <span id="previous" data-page-num="" data-event="click" data-handler="changePage" class="change hide">上一页</span>
+                <span id="currentPage"></span>
+                <span>/</span>
+                <span id="totalPage"></span>
+                <span id="next" data-page-num="" data-event="click" data-handler="changePage" class="change hide">下一页</span>
+            </div>
+            <div class="export right" data-event="click" data-handler="exportTable">
+                导出
+            </div>
+            <div class="selected right">
+                <span>已选</span>
+                <span id="hasSelected">0</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div id="detail" class="detail" data-id=""></div>
+    <script type="text/javascript" src="/manger/libs/WdatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/manger/libs/handlebars/handlebars.js"></script>
+    <script id="list-template" type="text/x-handlebars-template">
+        <tr class="title">
+            <th>项目名称</th>
+            <th>项目联系人</th>
+            <th>所在城市</th>
+            <th>年级</th>
+            <th>学校</th>
+            <th>电话</th>
+            <th>E-MAIL</th>
+            <th class="select" data-event="click" data-handler="allSelect">
+                <img class="all-select" src="/manger/img/un_select.png">
+            </th>
+        </tr>
+        {{#each this}}
+        <tr data-id="{{id}}" data-event="click" data-handler="showDetail" class="{{#status status}}{{/status}}">
+            <td>{{name}}</td>
+            <td>{{contact}}</td>
+            <td>{{city}}</td>
+            <td>{{education}}</td>
+            <td>{{school}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td class="select" data-event="click" data-handler="selectOne">
+                <img class="one-select" src="/manger/img/un_select.png" data-id="{{id}}">
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="/manger/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/manger/libs/placeholder/placeholder.js"></script>
+    <script type="text/javascript" src="/manger/libs/toast/toast.js"></script>
+    <script type="text/javascript" src="/manger/js/list.js"></script>
+</body>
+
+</html>

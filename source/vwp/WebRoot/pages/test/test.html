@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<meta http-equiv=Content-Type content="text/html;charset=utf-8"> -->
+    <meta charset="utf-8">
+	<script type="text/javascript" src="../../js/jquery/jquery.1.8.1.min.js"></script>
+
+</head>
+<script type="text/javascript">
+	var baseServerUrl="http://11.12.112.62:8080/"; 
+	function login(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/manage/login.do",
+			dataType : 'json',
+			contentType:"application/json",
+			data : JSON.stringify({
+				"userName" : "admin",
+				"passWord": "asd123"
+			}),
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function logout(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/manage/logout.do",
+			dataType : 'json',
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function checkCardId(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"personal/checkCardId.do",
+			dataType : 'json',
+			data : {
+				"cardId" : "123456"
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function savePersonal(){
+		var personal="{name:'泥可1234567890123456789012345678',school:'陕西邮电大学',cardId:'60102111114444123',"
+			+"department:'department123123',major:'专业专业3',education:3,phone:'13659895555',email:'eee@xdja.com',"
+			+"reward:'reward123',ranking:'ranking123123',experience:'experience12312',"
+// 			+"computerSkills:'java,javascript,jquery',evaluation:'自我感觉良好\\n自我感觉良好\\n自我感觉良好\\n',admissionTime:'2016-03-02'}";
+			+"computerSkills:'java,javascript,jquery',evaluation:'自我感觉良好\\n自我感觉良好\\n自我感觉良好\\n'}";
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/personal/save.do",
+			dataType : 'json',
+			contentType:"application/json",
+			data :  personal,
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function saveProject(){
+		var project="{name:'泥可12345678',type:2,target:'目标及方向',stage:'阶段及项目',school:'印度交大',"
+			+"contact:'联系人',city:'中国陕西省西安市',education:3,phone:'13659891234',email:'eee@xdja.com',major:'专业',"
+			+"overview:'项目概述。。项目里程碑18天完事。。。',"
+			+"members:[{name:'成员1',sex:1,school:'西安音乐学院',major:'专业1',education:1},{name:'成员2',sex:2,school:2,major:'专业2',education:2}]}";
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/project/save.do",
+			dataType : 'json',
+			contentType:"application/json",
+			data : project,
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function saveEntrepreneurial(){
+		var project="{name:'泥可12345678',type:2,target:'目标及方向',stage:'阶段及项目',school:'印度交大',"
+			+"contact:'联系人',city:'中国陕西省西安市',education:3,phone:'13659891234',email:'eee@xdja.com',major:'专业1',"
+			+"overview:'项目概述。。项目里程碑18天完事。。。',"
+			+"members:[{name:'成员1',sex:1,school:'西安音乐学院',major:'专业1',education:1},{name:'成员2',sex:2,school:2,major:'专业2',education:2}]}";
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/entrepreneurial/save.do",
+			dataType : 'json',
+			contentType:"application/json",
+			data : project,
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function modifyExamineState_personal(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/personal/modifyExamineState.do",
+			dataType : 'json',
+			data : {
+				"id":3,
+				"state" : 1
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function modifyExamineState_project(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/project/modifyExamineState.do",
+			dataType : 'json',
+			data : {
+				"id":6,
+				"state" : 1
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+
+	}
+	function modifyExamineState_entrepreneurial(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/entrepreneurial/modifyExamineState.do",
+			dataType : 'json',
+			data : {
+				"id":1,
+				"state" : 1
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+
+	}
+	function loadPersonal(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/personal/load.do",
+			dataType : 'json',
+			data : {
+				"id":2
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function loadProject(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/project/load.do",
+			dataType : 'json',
+			data : {
+				"id":5
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function loadEntrepreneurial(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/entrepreneurial/load.do",
+			dataType : 'json',
+			data : {
+				"id":1
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function search_personal(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/personal/search.do",
+			dataType : 'json',
+			data : {
+				"test":null
+// 				,"name":"泥煤"
+// 					,"school":"西"
+// 					,"sex":1
+// 					,"education":2
+					,currentPage:1
+					,pageSize:10
+				,startTime:"2016-04-29"
+				,endTime:"2016-06-07"
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function search_project(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/project/search.do",
+			dataType : 'json',
+			data : {
+				"test":null
+// 				,"name":"123"
+					,"school":"交大"
+// 					,"sex":1
+// 					,"education":2
+// 					,currentPage:1
+// 					,pageSize:2
+					,startTime:"2016-04-28"
+		 				,endTime:"2016-06-30"
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function search_entrepreneurial(){
+		$.ajax({
+			type : "GET",
+			url : baseServerUrl+"vwp/entrepreneurial/search.do",
+			dataType : 'json',
+			data : {
+				"test":null
+// 				,"name":"123"
+					,"school":"交大"
+// 					,"sex":1
+// 					,"education":2
+// 					,currentPage:1
+// 					,pageSize:2
+					,startTime:"2016-04-28"
+		 				,endTime:"2016-06-30"
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+
+	function site_register(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/site/register.do",
+			dataType : 'json',
+			data : {
+// 				"test":null
+				"school":1
+			},
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	function sys_increaseUserCount(){
+		$.ajax({
+			type : "POST",
+			url : baseServerUrl+"vwp/sys/increaseUserCount.do",
+			dataType : 'json',
+			success : function(data) {
+				debugger;
+				alert(data);
+			},
+			error : function(res) {
+			}
+		});
+	}
+	
+</script>
+<body>
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:login();">test_login(admin)</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:logout();">test_logout</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:checkCardId();">test_checkCardId</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:savePersonal();">test_save_personal</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:saveProject();">test_save_project</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:saveEntrepreneurial();">test_save_entrepreneurial</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:modifyExamineState_personal();">test_modifyExamineState_personal</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:modifyExamineState_project();">test_modifyExamineState_project</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:modifyExamineState_entrepreneurial();">test_modifyExamineState_entrepreneurial</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:loadPersonal();">test_loadPersonal</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:loadProject();">test_loadProject</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:loadEntrepreneurial();">test_loadEntrepreneurial</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:search_personal();">test_search_personal</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:search_project();">test_search_project</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:search_entrepreneurial();">test_search_entrepreneurial</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="http://11.12.112.62:8080/vwp/personal/zipDownload.do?downloadIds=1,2,3,4,5">test_personal_zipDownload</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="http://11.12.112.62:8080/vwp/project/zipDownload.do?downloadIds=5,14,15,16">test_project_zipDownload</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="http://11.12.112.62:8080/vwp/entrepreneurial/zipDownload.do?downloadIds=1,2,3,4">test_entrepreneurial_zipDownload</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:site_register();">test_site_register</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="http://11.12.112.62:8080/vwp/site/get.do">test_site_get</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="javascript:sys_increaseUserCount()">test_sys_increaseUserCount</a>
+	<br>-------------------------------------------------------------------------
+	<br>-------------------------------------------------------------------------<br>
+	<a href="http://11.12.112.62:8080/vwp/sys/getUserCount.do">test_sys_getUserCount</a>
+	<br>-------------------------------------------------------------------------
+</body>
+</html>

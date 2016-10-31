@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="no-cache">
+    <title>虚拟职场个人报名</title>
+    <link rel="icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon"  href="/favicon.ico"  type="image/x-icon">
+    <link rel="Bookmark" href="/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/youth/common/default.css">
+    <link rel="stylesheet" type="text/css" href="/youth/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/youth/root/join/join.css">
+    <style type="text/css">
+    .common-wrapper .nav .nav-background {
+        background-color: #ffffff;
+        border-bottom: 1px solid #E4E4E4;
+        opacity: 1;
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    }
+    
+    .common-wrapper .nav .logo {
+        background: url("/youth/img/logo2.png");
+    }
+    
+    .common-wrapper .nav li a {
+        text-decoration: none;
+        color: #000;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="join-wrapper">
+        <div class="common-wrapper"></div>
+        <div class="join-body">
+            <div class="biao-container content">
+                <div class="biao-title">
+                    <h1>虚拟职场个人报名</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="crumbs">
+                    <img src="/youth/img/home.png">
+                    <a class="crumbs-item" href="/youth/root/join/join.html">加入我们</a>
+                    <span>></span>
+                    <a class="crumbs-item" href="/youth/root/join/join.html#baoming">在线报名</a>
+                    <span>></span>
+                    <span class="crumbs-biao-title">虚拟职场个人报名</span>
+                </div>
+                <div class="biao-content">
+                    <form class="personal biao">
+                        <div class="date">
+                            <span>报名日期</span>
+                            <input id="sendTime" disabled="disabled"></input>
+                            <span class="star">*</span>
+                            <span class="star-info">为必填项</span>
+                            <span class="star red">*</span>
+                            <span class="star-info">为输入有误</span>
+                        </div>
+                        <hr>
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <span>姓名</span>
+                                    <input id="name" onkeyup="personal.regVal.call(this,'name')" maxlength="20"></input>
+                                    <span class="star name">*</span>
+                                </div>
+                                <div class="item">
+                                    <span>性别</span>
+                                    <span id="sex" class="select-value" data-event="click" data-handler="showSelectLists">请选择</span>
+                                    <ul class="select hide">
+                                        <li onclick="selectOneList.call(this)" class="selected" value="-1">请选择</li>
+                                        <li onclick="selectOneList.call(this)" value="0">男</li>
+                                        <li onclick="selectOneList.call(this)" value="1">女</li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <span>身份证号</span>
+                                    <input id="cardId" onkeyup="personal.regVal.call(this,'cardId')" maxlength="18"></input>
+                                    <span class="star cardId">*</span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <span>入学时间</span>
+                                    <input id="admissionTime" type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" readonly="readonly" datatype="*" nullmsg="请选择入学时间" sucmsg=" ">
+                                </div>
+                                <div class="item">
+                                    <span>学校</span>
+                                    <input id="school" maxlength="20" onkeyup="personal.regVal.call(this,'school')"></input>
+                                    <span class="star school">*</span>
+                                </div>
+                                <div class="item">
+                                    <span>专业</span>
+                                    <input id="major" maxlength="20" onkeyup="personal.regVal.call(this,'major')"></input>
+                                    <span class="star major">*</span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <span>年级</span>
+                                    <span id="education" class="select-value" data-event="click" data-handler="showSelectLists" id="education">大三</span>
+                                    <ul class="select hide">
+                                        <li onclick="selectOneList.call(this)" value="-1">请选择</li>
+                                        <li onclick="selectOneList.call(this)" value="1">大一</li>
+                                        <li onclick="selectOneList.call(this)" value="2">大二</li>
+                                        <li onclick="selectOneList.call(this)" class="selected" value="3">大三</li>
+                                        <li onclick="selectOneList.call(this)" value="4">大四</li>
+                                        <li onclick="selectOneList.call(this)" value="5">研一</li>
+                                        <li onclick="selectOneList.call(this)" value="6">研二</li>
+                                        <li onclick="selectOneList.call(this)" value="7">研三</li>
+                                    </ul>
+                                    <span class="star">*</span>
+                                </div>
+                                <div class="item">
+                                    <span>电话</span>
+                                    <input id="phone" onkeyup="personal.regVal.call(this,'phone')" maxlength="20"></input>
+                                    <span class="star phone">*</span>
+                                </div>
+                                <div class="item">
+                                    <span>Email</span>
+                                    <input id="email" onkeyup="personal.regVal.call(this,'email')" maxlength="50"></input>
+                                    <span class="star email">*</span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="describe">
+                                <p>所获奖励<span>限200字</span></p>
+                                <textarea id="reward" class="reward" placeholder="" maxlength="200" onkeyup="isMaxlength.call(this,200)"></textarea>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="describe">
+                                <p>成绩排名</p>
+                                <textarea id="ranking" class="ranking" maxlength="50" onkeyup="isMaxlength.call(this,50)"></textarea>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="describe">
+                                <p>培训经历<span>限300字</span></p>
+                                <textarea id="experience" placeholder="" maxlength="300" onkeyup="isMaxlength.call(this,300)"></textarea>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="describe">
+                                <p>掌握的计算机语言<span>必填项</span></p>
+                                <textarea id="computerSkills" class="computerSkills" maxlength="200" onkeyup="isMaxlength.call(this,200)"></textarea>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="describe">
+                                <p>自我评价<span>必填项</span><span>限300字</span></p>
+                                <textarea id="evaluation" class="evaluation" maxlength="300" onkeyup="isMaxlength.call(this,300)"></textarea>
+                                <div class="clear"></div>
+                            </li>
+                        </ul>
+                    </form>
+                    <button class="submit" id="submit" onclick="personal.submit()">提交</button>
+                    <p class="tip">提交成功后，请耐心等待我们的电话或邮件通知！</p>
+                    <p class="tip">欢迎加入官方QQ群交流互动！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="detail" id="detail"></div>
+    </div>
+    <script type="text/javascript" src="/youth/libs/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/youth/libs/handlebars/handlebars.js"></script>
+    <script type="text/javascript" src="/youth/common/common.js"></script>
+    <script type="text/javascript" src="/youth/libs/WdatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/youth/common/toast.js"></script>
+    <script type="text/javascript" src="/youth/root/join/personal.js"></script>
+    <script type="text/javascript" src="/youth/root/join/project.js"></script>
+    <script type="text/javascript" src="/youth/root/join/youth.js"></script>
+    <script type="text/javascript" src="/youth/root/join/join.js"></script>
+</body>
+
+</html>

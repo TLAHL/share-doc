@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd"
+		default-lazy-init="false">
+	<!-- 配置返回结果的默认字符集，以及格式化json -->
+	<bean id="dataSource"
+        class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl"  value="${jdbc.url}"></property>
+        <property name="user"  value="${jdbc.username}"></property>
+        <property name="password"  value="${jdbc.password}"></property>
+        <!-- 连接关闭时默认将所有未提交的操作回滚。默认为false -->
+        <property name="autoCommitOnClose" value="${autoCommitOnClose}"/>
+        <!-- 连接池中保留的最小连接数-->
+        <property name="minPoolSize" value="${minPoolSize}"/>
+        <!-- 连接池中保留的最大连接数。默认为15 -->
+        <property name="maxPoolSize" value="${maxPoolSize}"/>
+        <!-- 初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。默认为3 -->
+        <property name="initialPoolSize" value="${initialPoolSize}"/>
+        <!-- 最大空闲时间，超过空闲时间的连接将被丢弃。为0或负数则永不丢弃。默认为0秒 -->
+        <property name="maxIdleTime" value="${maxIdleTime}"/>
+        <!-- 当连接池中的连接用完时，C3P0一次性创建新连接的数目。默认为3 -->
+        <property name="acquireIncrement" value="${acquireIncrement}"/>
+        <!-- 定义在从数据库获取新连接失败后重复尝试获取的次数，默认为30 -->
+        <property name="acquireRetryAttempts" value="${acquireRetryAttempts}"/>
+        <!-- 当连接池用完时客户端调用getConnection()后等待获取新连接的时间，超时后将抛出SQLException，如设为0则无限期等待。单位毫秒，默认为0 -->
+        <property name="checkoutTimeout" value="${checkoutTimeout}"/>
+    </bean>
+
+    <!-- 设置sessionFactory -->
+    <bean id="sessionFactory"
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+        p:dataSource-ref="dataSource">
+        <property name="packagesToScan">
+            <list>
+<!--                 <value>com.**.*etity</value> -->
+                <value>com.xdja.vwp*.**.**.**</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+           
+            	<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop><!-- validate,update,create,create-drop -->
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+                <prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+                <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <!-- 二级缓存 -->
+                <prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+                <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+                <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>  
+                <prop key="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.internal.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="hibernateTemplate"
+		class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!--Hibernate TransactionManager-->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+<!-- 	<aop:config proxy-target-class="true"> -->
+<!--          <aop:pointcut expression="execution(* com.xdja.vwp.contact.service.impl.*.*(..))" id="pointcut"/> -->
+<!--          <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/> -->
+<!--     </aop:config> -->
+</beans>
+   

@@ -1,0 +1,233 @@
+body {
+    position: relative;
+}
+body.stop-scroll{
+    overflow: hidden;
+}
+.content .title h1 {
+    font-size: 28px;
+    line-height: 54px;
+    font-weight: normal;
+    float: left;
+    margin: 42px 0;
+}
+
+.content .rect {
+    width: 26px;
+    height: 6px;
+    background-color: #36c880;
+    float: left;
+    margin: 79px 0 0 14px;
+}
+
+.content .biaoming li {
+    float: left;
+    width: 44.375%;
+    height: 123px;
+    cursor: pointer;
+}
+
+.content .biaoming li.personal {
+    margin-right: 5%;
+}
+
+.content .biaoming li.project {
+    margin-bottom: 0;
+}
+
+.content .biaoming li .rect-title {
+    height: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+    background: #36c880;
+}
+
+.content .biaoming li .rect-title.hidden {
+    visibility: hidden;
+}
+
+.content .biaoming li a {
+    background: #b2b2b2;
+    font-size: 32px;
+    line-height: 103px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    height: 103px;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+}
+
+.content .biaoming li.active a {
+    background: #36c880;
+}
+
+.content form {
+    margin-top: 61px;
+}
+
+.content form .Wdate {
+    background: #f1f1f1 url("/front/common/img/datePicker.gif") no-repeat;
+    background-position: 88%;
+}
+
+.content form select {
+    width: 47%;
+    height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.content form input {
+    width: 47%;
+    height: 52px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    text-indent: 2em;
+}
+
+.content form .date {
+    text-align: left;
+}
+
+.content form .date input {
+    width: 15.51%;
+}
+
+.content form hr {
+    border: none;
+    border-bottom: 1px dotted #284b81;
+    margin: 33px 0;
+    width: 94%;
+}
+
+.content form .item {
+    text-align: left;
+}
+
+.content form span {
+    display: inline-block;
+    width: 64px;
+    text-align: justify;
+    margin-right: 30px;
+}
+
+.content form .star {
+    margin-right: 0;
+    width: 5px;
+}
+
+.content form .star.red {
+    color: red;
+}
+
+.content form span.star-info {
+    width: 70px;
+}
+
+.content form li {
+    margin: 22px 0;
+    text-align: left;
+}
+
+.content form li .item {
+    float: left;
+    width: 33%;
+}
+
+.content form li p {
+    float: left;
+    width: 64px;
+    text-align: center;
+    margin-right: 33px;
+    font-size: 16px;
+}
+
+.content form li p span {
+    font-size: 12px;
+    text-align: right;
+}
+
+.content form textarea {
+    width: 74.5%;
+    height: 163px;
+    border: 1px solid #e4e4e4;
+    text-indent: 2em;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px 60px;
+    line-height: 46px;
+    font-size: 16px;
+}
+
+.content .submit {
+    background: #36c880;
+    width: 156px;
+    height: 48px;
+    border-radius: 48px;
+    border: none;
+    margin: 52px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.content .tip {
+    font-size: 14px;
+    line-height: 26px;
+    color: #808080;
+}
+
+.content form textarea.ranking {
+    height: 52px;
+}
+
+.content form textarea.computerSkills {
+    height: 53px;
+}
+
+.content form textarea.evaluation {
+    height: 123px;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    z-index: 1;
+    display: none;
+}
+
+.mask.show {
+    display: block;
+}
+
+.detail {
+    position: fixed;
+    width: 1300px;
+    height: 700px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+}
+
+.detail.show {
+    display: block;
+    overflow: auto;
+}

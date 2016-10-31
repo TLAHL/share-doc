@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>加入我们</title>
+    <link rel="stylesheet" type="text/css" href="/front/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/front/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="join.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="contact">
+                <img class="qq" src="/front/common/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+                <img class="email" src="/front/common/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+                <div class="clear"></div>
+            </div>
+            <ul>
+                <li><a href="/front/module/home/home.html">首页</a></li>
+                <li><a href="/front/module/workplace/workplace.html">虚拟职场</a></li>
+                <li class="now"><a href="/front/module/join/join.html?">加入我们</a></li>
+                <li><a href="/front/module/project/project.html">项目等你</a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+            <div class="qq-div hide">
+                <div class="trangle-up"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+            <div class="email-div hide">
+                <div class="trangle-up email"></div>
+                <div class="qq-email-info">
+                    <p class="name"></p>
+                    <p class="num"></p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="text">
+                <div class="rect"></div>
+                <h1>Join us</h1>
+                <h2>虚拟职场-IT青年创新 · 创业帮</h2>
+                <p>你有能力，我给平台，帮你圆梦，助力IT</p>
+                <div class="baoming" onclick="baoming()">
+                    <a>在线报名</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content">
+            <ul class="stations">
+                <li class="xiyou" data-index="0" onclick="selectStation.call(this)">
+                    <div class="rect-title"></div>
+                    <p>西邮站</p>
+                    <div class="clear"></div>
+                </li>
+                <li class="xigongda" data-index="4" onclick="selectStation.call(this)">
+                    <div class="rect-title"></div>
+                    <p>西北大学站</p>
+                    <div class="clear"></div>
+                </li>
+                <li class="wait">
+                    <div class="rect-title"></div>
+                    <p>敬请期待</p>
+                    <div class="clear"></div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <div class="personal">
+                <div class="title">
+                    <h1>人才评选流程</h1>
+                    <div class="rect"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="process">
+                    <div class="circle one"></div>
+                    <hr class="one">
+                    <div class="circle two"></div>
+                    <hr class="two">
+                    <div class="circle three"></div>
+                    <hr class="three">
+                    <div class="circle four"></div>
+                    <hr class="four">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>报名</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            登录www.xdja.com/youth报名，填写并提交报名表。报名条件：计算机相关专业学生。（有无创新/创业项目均可。如有创新/创业项目，请填写项目报名信息）
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>初选</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            通知符合报名条件的学生或者项目入围，给学生发送邮件告知官方QQ群号，学生进入“IT青年创新创业邦”群组。进入该群组成员可参加信大捷安定期授课，学习课堂之外知识，如专业知识类、综合素质提升类、就业资讯建议等。
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>复选</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            由IT技术专家和人力资源组成考评小组，对“IT青年创新创业邦”群组成员进 行考试，选拔优秀学生进入“虚拟职场”，成为职员。“虚拟职场”成员，模 拟现实公司，进行角色扮演，公司给予项目（或选取学生提供的优秀项目）全 体职员一起完成，公司技术专家给予技术指导和建议。
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>录用</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            “虚拟职场”优秀职员，可获得假期实习或毕业后优先被我司录用机会。其他成员，相信在职场一番历练之后，就业或创业竞争力会大大提升。
+                        </p>
+                    </div>
+                    <hr class="four">
+                    <div class="circle four"></div>
+                    <hr class="three">
+                    <div class="circle three"></div>
+                    <hr class="two">
+                    <div class="circle two"></div>
+                    <hr class="one">
+                    <div class="circle one"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="title">
+                    <h1>项目评选流程</h1>
+                    <div class="rect yellow"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="process">
+                    <div class="circle one"></div>
+                    <hr class="one">
+                    <div class="circle two"></div>
+                    <hr class="two">
+                    <div class="circle three"></div>
+                    <hr class="three">
+                    <div class="circle four"></div>
+                    <hr class="four">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>报名</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            登录www.xdja.com/youth报名，填写并提交报名表。 报名条件：计算机相关专业学生。
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>初选</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            通知符合报名条件项目入围，给您发送邮件（电话、QQ）告知，学生进入“IT青年创新创业邦”群组。进入该群组成员可参加信大捷安定期授课，学习课堂之外知识，如专业知识类、综合素质提升类、就业资讯建议等。
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>评估</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            由IT技术专家、资深产品经理和人力资源组成考评小组，评审X%的项目进入“虚拟职场”，成为优秀待启动项目。“虚拟职场”成员围绕此项目，模拟现实公司，进行角色扮演，公司给予项目（或选取学生提供的优秀项目）全体职员一起完成，公司技术专家给予技术指导和建议。
+                        </p>
+                    </div>
+                    <hr class="five">
+                    <div class="circle five" onmouseover="showInfo.call(this)" onmouseout="hideInfo.call(this)">
+                        <span>启用</span>
+                        <div class="trangle-up hide"></div>
+                        <p class="hide">
+                            “虚拟职场”中的优秀项目，可获得公司的大力支持启动该项目。锻炼项目成员的实践能力、合作能力、管理能力等。
+                        </p>
+                    </div>
+                    <hr class="four">
+                    <div class="circle four"></div>
+                    <hr class="three">
+                    <div class="circle three"></div>
+                    <hr class="two">
+                    <div class="circle two"></div>
+                    <hr class="one">
+                    <div class="circle one"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <a class="back-to-up hide" href="#top"></a>
+    </div>
+    <div class="footer">CopyRight © 2010-2016 信大捷安西安分公司</div>
+    <script type="text/javascript" src="/front/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/front/common/js/common.js"></script>
+    <script type="text/javascript" src="/front/module/join/join.js"></script>
+</body>
+
+</html>

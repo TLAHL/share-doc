@@ -1,0 +1,59 @@
+<script id="common-template" type="text/x-handlebars-template">
+    {{#if nav}}
+    <div class="nav">
+        <div class="nav-background"></div>
+        <div class="logo" onclick="showHome()"></div>
+        <div class="contact">
+            <img class="qq" src="/youth/img/qq1.png" onmouseover="showQQInfo()" onmouseout="hideQQInfo()">
+            <img class="email" src="/youth/img/youxiang1.png" onmouseover="showEmailInfo()" onmouseout="hideEmailInfo()">
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <li class="home"><a href="/a/home.html">首页</a></li>
+            <li class="youth"><a href="/b/youth.html">创新创业帮</a></li>
+            <li class="workplace"><a href="/c/workplace.html">虚拟职场</a></li>
+            <li class="join"><a href="/d/join.html">加入我们</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+        <div class="qq-div hide">
+            <div class="qq-email-info">
+                <p>郑州帮QQ号：369232564</p>
+                <p>西安帮QQ号：234210993</p>
+            </div>
+        </div>
+        <div class="email-div hide">
+            <div class="qq-email-info">
+                <p>官方邮箱：youth@xdja.com</p>
+            </div>
+        </div>
+    </div>
+    {{/if}} {{#if copyRight}}
+    <div class="copy-right">
+        <p>CopyRight © 2010-2016 郑州信大捷安信息技术股份有限公司</p>
+    </div>
+    {{/if}} {{#if suspendedBall}}
+    <div class="suspended-ball">
+        {{#if suspendedBall.top}}
+        <a class="top item" onclick="backToTop()"></a>
+        {{/if}} {{#if suspendedBall.notice}}
+        <div onmouseover="showNoticeEnter()" onmouseout="hideNoticeEnter()" onclick="notice()">
+            <a id="noticeImg" class="notice item"></a>
+            <a onclick="notice()" class="notice-enter item hide">公告入口</a>
+        </div>
+        {{/if}} {{#if suspendedBall.official}}
+        <div onmouseover="showOfficialEnter()" onmouseout="hideOfficialEnter()" onclick="openOffical()">
+            <a class="official item"></a>
+            <a class="official-enter item hide">官网入口</a>
+        </div>
+        {{/if}} {{#if suspendedBall.sweep}}
+        <a class="sweep item" onmouseover="showSweepQrCode()" onmouseout="hideSweepQrCode()"></a>
+        <div class="sweep-qr-code-kuang hide">
+            <div class="sweep-qr-code">
+            </div>
+            <p>关注信大捷安公众号</p>
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+</script>

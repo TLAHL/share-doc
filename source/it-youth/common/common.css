@@ -1,0 +1,392 @@
+body {
+    min-width: 1330px;
+    min-height: 760px;
+}
+
+body.stop-scroll {
+    overflow: hidden;
+}
+
+
+/*导航条*/
+
+.common-wrapper .nav {    
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    min-width: 1330px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.common-wrapper .nav .nav-background{
+    min-width: 1348px;
+    height: 104px;
+    background-color: #040304;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.common-wrapper .nav .logo {
+    background: url("/youth/img/logo1.png");
+    width: 137px;
+    height: 47px;
+    margin: auto;
+    float: left;
+    margin: 29px 55px;
+    cursor: pointer;
+}
+
+.common-wrapper .nav ul {
+    float: right;
+    margin-top: 38px;
+    margin-right: 7%;
+}
+
+.common-wrapper .nav li {
+    float: left;
+    font-size: 16px;
+    height: 63px;
+    line-height: 63px;
+    padding: 0 58px;
+}
+
+.common-wrapper .nav li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.common-wrapper .nav li.now {
+    border-bottom: 3px solid #36C880;
+}
+
+.common-wrapper .nav li.now a {
+    color: #36C880;
+}
+
+.clear {
+    clear: both;
+}
+
+.common-wrapper .nav .contact {
+    margin-top: 47px;
+    margin-right: 20px;
+    float: right;
+}
+
+.common-wrapper .nav .contact img {
+    margin-right: 36px;
+    cursor: pointer;
+}
+
+.common-wrapper .nav .qq-div {
+    position: relative;
+    z-index: 2;
+}
+
+.common-wrapper .nav .qq-div.hide {
+    display: none;
+}
+.common-wrapper .nav .email-div {
+    position: relative;
+}
+.common-wrapper .nav .email-div .qq-email-info p{
+    margin-top: 35px;
+    margin-left: 18px;
+}
+
+.common-wrapper .nav .email-div.hide {
+    display: none;
+}
+
+.common-wrapper .nav .email-div .qq-email-info {
+    background-image: url("/youth/img/kuang1_email.png");
+}
+
+.common-wrapper .nav .qq-email-info {
+    width: 290px;
+    height: 150px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -18px;
+    right: -88px;
+    padding: 30px;
+    background-image: url("/youth/img/kuang1.png");
+}
+
+.common-wrapper .nav .qq-email-info p {
+    color: black;
+    font-weight: bolder;
+    margin-top: 16px;
+    margin-left: 24px;
+}
+
+
+/*版权*/
+
+.copy-right {
+    color: #808080;
+    height: 180px;
+    font-size: 12px;
+    line-height: 128px;    
+    background: #f8f8f8;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.copy-right p{
+    padding-left: 8%;
+}
+
+
+/*悬浮球*/
+
+.common-wrapper .suspended-ball {
+    width: 60px;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    bottom: 7%;
+    display: block;  
+}
+
+.common-wrapper .suspended-ball .item {
+    width: 60px;
+    height: 60px;
+    display: block;
+    cursor: pointer;
+    margin-top: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #66D49E;
+    float: right;
+}
+
+.common-wrapper .suspended-ball .item:hover {
+    background-color: #373B3C;
+}
+
+.common-wrapper .suspended-ball .item.hide {
+    display: none;
+}
+
+
+/*返回顶部*/
+
+.common-wrapper .suspended-ball .item.top {
+    width: 60px;
+    height: 70px;
+    background: url("/youth/img/top.png");
+}
+
+.common-wrapper .suspended-ball .item.top:hover {
+    width: 60px;
+    height: 70px;
+    background: url("/youth/img/top_hover.png");
+}
+
+
+/*公告*/
+
+.common-wrapper .suspended-ball .item.notice {
+    background-image: url("/youth/img/notice.png");
+}
+
+.common-wrapper .suspended-ball .item.notice.hide {
+    display: none;
+}
+
+
+/*公告入口*/
+
+.common-wrapper .suspended-ball .item.notice-enter {
+    background-position: 13px;
+    background-color: #373B3C;
+    background-image: url("/youth/img/notice.png");
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    padding: 0 14px 0 59px;
+    text-decoration: none;
+}
+
+.common-wrapper .suspended-ball .item.notice-enter.hide {
+    display: none;
+}
+
+
+/*官网*/
+
+.common-wrapper .suspended-ball .item.official {
+    background-image: url("/youth/img/official.png");
+}
+
+.common-wrapper .suspended-ball .item.official.hide {
+    display: none;
+}
+
+
+/*官网入口*/
+
+.common-wrapper .suspended-ball .item.official-enter {
+    background-position: 13px;
+    background-color: #373B3C;
+    background-image: url("/youth/img/official.png");
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    padding: 0 14px 0 59px;
+    text-decoration: none;
+}
+
+.common-wrapper .suspended-ball .item.official-enter.hide {
+    display: none;
+}
+
+
+/*微信*/
+
+.common-wrapper .suspended-ball .item.sweep {
+    background-image: url("/youth/img/sweep.png");
+}
+
+
+/*二维码*/
+
+.common-wrapper .suspended-ball .sweep-qr-code-kuang {
+    display: block;
+    cursor: pointer;
+    margin-top: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+    width: 180px;
+    height: 195px;
+    position: absolute;
+    right: 60px;
+    top: 54px;
+    z-index: 2;
+    background-image: url("/youth/img/kuang2.png");
+}
+.common-wrapper .suspended-ball .sweep-qr-code-kuang.hide{
+    display: none;
+}
+
+.common-wrapper .suspended-ball .sweep-qr-code-kuang .sweep-qr-code {
+    width: 116px;
+    height: 116px;
+    background-image: url("/youth/img/public_code.png");
+    position: absolute;
+    top: 27px;
+    left: 29px;
+}
+
+.common-wrapper .suspended-ball .sweep-qr-code-kuang.sweep-qr-code-kuang p {
+    position: absolute;
+    bottom: 23px;
+    left: 26px;
+}
+
+.banner {
+    height: 627px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.banner .text {
+    float: left;
+    width: 540px;
+    /*margin-top: 16%;*/
+    margin-top: 15%;
+    margin-left: 8%;
+    color: white;
+}
+
+.banner .text .rect {
+    width: 38px;
+    height: 6px;
+    background: white;
+    /*margin-bottom: 10px;*/
+    margin-bottom: 38px;
+}
+
+.banner .text h1 {
+    font-size: 48px;
+    margin-bottom: 23px;
+    font-family: Arial;
+    font-weight: normal;
+}
+
+.banner .text h2 {
+    font-size: 34px;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+.banner .text p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.content {
+    margin: 15px auto 48px auto;
+    text-align: center;
+    max-width: 1800px;
+    padding: 0 8%;
+}
+
+::selection {
+    background: #36c880;
+}
+::-moz-selection{
+    background: #36c880;
+}
+
+.infinite {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+}
+
+
+/*向上的三角形*/
+
+.trangle-up {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #A5A7A9;
+    top: -16px;
+    right: 128px;
+    position: absolute;
+}
+#toastMessage-div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.toast{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 260px;
+    height: 50px;
+    background: black;
+    opacity: 0.75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+}

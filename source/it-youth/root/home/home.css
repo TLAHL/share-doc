@@ -1,0 +1,249 @@
+body{
+	min-height: 600px;
+	min-width: 1300px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.home-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+/*    background: url("/youth/img/bj0.png");*/
+    /*??ie8*/
+    -ms-background-position-y: 100%;
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    background-position-y: 100%;
+    background-size: 100% 100%;
+    min-height: 600px;
+    min-width: 1300px;
+    overflow: hidden;
+    max-width: 2000px;
+    max-height: 1000px;
+    margin: 0 auto;
+}
+.home-wrapper1{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	height: 100%;
+	width: 100%;
+	background: url("/youth/img/bj0.jpg");
+	background-size: inherit;
+}
+.home-wrapper2{
+	position: absolute;
+    top: -100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	height: 100%;
+	width: 100%;
+	background: url("/youth/img/bj1.jpg");
+}
+
+
+/*?????Y2????*/
+
+.home-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-height: 600px;
+    min-width: 1300px;
+}
+
+.home-body hr {
+    margin: 0;
+}
+
+.home-body .summary {
+    position: absolute;
+    top: calc(50% - 155px);
+    /*??IE8*/
+    top: 32%\0;
+    left: -100%;
+    min-width: 820px;
+    max-width: 1051px;
+    opacity: 0.9;
+    display: none;
+}
+
+.home-body .summary.gradient {
+	/*??IE8*/
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1,startColorStr=#cbd82d,endColorStr=#02c098);
+    background: -webkit-linear-gradient(120deg, #cbd82d, #02c098);
+    background: -o-linear-gradient(120deg, #cbd82d, #02c098);
+    background: -moz-linear-gradient(120deg, #cbd82d, #02c098);
+    background: -ms-linear-gradient(top, #cbd82d, #02c098);
+    background: linear-gradient(120deg, #cbd82d, #02c098);
+    background-color: #02c098;
+}
+
+.home-body .summary .item {
+    min-width: 528px;
+    margin: 50px 100px 20px 100px;
+    display: none;
+}
+
+.home-body .summary .item.show {
+    display: block;
+}
+
+.home-body .summary .title {
+    padding-bottom: 23px;
+    position: relative;
+    text-align: left;
+}
+
+hr {
+    opacity: 0.5;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.home-body .summary .item h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 13px;
+    float: left;
+    margin-top: 10px;
+}
+
+.home-body .rect {
+	display: block;
+    width: 26px;
+    height: 6px;
+    background-color: #fff;
+    /*float: left;*/
+    margin-top: 34px;
+    /*margin-left: 10px;*/
+
+}
+
+.home-body .summary .item h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+    font-family: Arial;
+}
+
+.home-body .summary .item h3 {
+    font-size: 24px;
+    color: white;
+    font-weight: normal;
+}
+
+.home-body .summary .item.join h3 {
+    cursor: pointer;
+    border-radius: 24px;
+    border: 1px solid white;
+    width: 122px;
+    line-height: 38px;
+    text-align: center;
+    height: 38px;
+    margin-top: 10px;
+}
+
+
+
+.home-body .summary .item .describe h2 {
+    font-size: 28px;
+    color: white;
+    font-family: "???????o??";
+}
+
+.home-body .summary .item .describe p {
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    line-height: 27px;
+    margin: 8px 0 6px 0;
+}
+
+
+/*more*/
+
+.home-body .summary .more {
+    margin: 0px 101px;
+    width: 121px;
+    height: 43px;
+    background-color: white;
+    font-size: 16px;
+    font-family: "Tahoma";
+    border-radius: 24px;
+    -moz-border-radius: 24px;
+    line-height: 43px;
+    text-align: center;
+    color: #02C098;
+    margin-bottom: 55px;
+    cursor: pointer;
+
+}
+
+
+
+
+
+/*????2??D??2???*/
+
+.home-body .list {
+    position: absolute;
+    width: 16px;
+    right: 10%;
+    top: 50%;
+}
+
+.home-body .list .radio {
+    width: 13.5px;
+    height: 13.5px;
+    height: 14px\0;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    margin: 9px 0;
+    opacity: 0.6;
+    cursor: pointer;
+    background: url("/youth/img/buttonshou2.png");
+}
+
+.home-body .list .radio.now {
+    background: #36c880;
+    opacity: 1;
+    background: url("/youth/img/buttonshou1.png");
+}
+
+
+/*???????*/
+
+.footer-home {
+    color: white;
+    font-size: 12px;
+    position: relative;
+    left: 10%;
+    bottom: 62px;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
